@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleDetalle.css">
+    <link rel="stylesheet" href="css/daltonismo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <svg width="0" height="0" style="position:absolute">
+        <defs>
+            <filter id="protanopia">
+                <feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0, 0.558, 0.442, 0, 0, 0, 0, 0.242, 0.758, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="deuteranopia">
+                <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0, 0.7, 0.3, 0, 0, 0, 0, 0.3, 0.7, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="tritanopia">
+                <feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0, 0, 0.433, 0.567, 0, 0, 0, 0.475, 0.525, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+        </defs>
+    </svg>
+    <section class="volver contianer">
+        <button class="volver-btn" onclick="redirectToVolver()"> <i class="fas fa-arrow-left"></i> VOLVER</button>
+    </section>
+    <section class="libros container">
+        <div class="box-detalle-libro1">
+            <div class="box-1 libro1">
+                <div class="contenido-principal">
+                    <img src="imagen/salud11.png" alt="">
+                    <div class="detalle-libro">
+                        <div class="titulo-autor">
+                            <h2>EL DAÑO CEREBRAL INVISIBLE.</h2>
+                            <h3>Por: <span class="autor"><i class="fas fa-user"></i> Aurora Lassaletta Atienza</span></h3>
+                            <button class="prestar-btn" onclick="redirectToReservar()"> PRESTAR</button>
+                            <h4>Reseña:</h4>
+                            <div class="reseña-container">
+                                <p class="reseña">
+                                El libro cuenta, de forma amena ―muchas veces incluso divertida― y muy cercana al <br>
+                                lector, la experiencia de la autora, la psicóloga clínica Aurora Lassaletta, mediante <br>
+                                numerosas anécdotas extraídas de su vida cotidiana a lo largo de más de catorce años. <br>
+                                Traza un recorrido por los síntomas cognitivos, conductuales, emocionales y físicos <br>
+                                del daño cerebral adquirido (DCA) a los que ha tenido que enfrentarse en este tiempo,<br>
+                                destacando, por una parte, su invisibilidad, esto es, la dificultad que conlleva <br>
+                                para otras personas, incluso para las más cercanas como familia y amigos, comprender <br>
+                                o percibir estos síntomas como secuelas reales de la lesión; y, por otra parte, <br>
+                                proporcionando a otras personas afectadas por una lesión cerebral y a sus más <br>
+                                allegados, estrategias y recursos para afrontar el día a día y minimizar las <br>
+                                frustraciones y limitaciones que se ven obligados a enfrentar. El relato vivencial <br>
+                                de la autora va acompañado de comentarios técnicos de profesionales de la <br>
+                                neuropsicología, la psicología clínica y la medicina rehabilitadora desde sus <br>
+                                perspectivas. La autora colabora con asociaciones y personas con daño cerebral <br>
+                                adquirido de forma habitual.</p>
+                                <button class="mostrar-mas-btn">MOSTRAR MÁS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="datos-libro" style="margin-top: -105px;">
+                    <p><strong>ISBN:</strong> 7931023</p>
+                    <p><strong>Autor:</strong> Aurora Lassaletta Atienza</p>
+                    <p><strong>Editorial:</strong> Giunti Psychometrics SLU</p>
+                    <p><strong>Materia:</strong> Medicina</p>
+                    <p><strong>Año:</strong> 2017</p>
+                    <p><strong>Idioma:</strong> Español</p>
+                    <p><strong>Páginas:</strong> 345</p>
+                    <p><strong>Encuadernación:</strong> Tapa blanda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h2 class="libro"><i class="fas fa-book"></i> Libros Relacionados</h2>
+    <section class="recomendados-1">
+        
+        <div class="slider-1">
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud2.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud2()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>KUBY Inmunología Octava Edición</h3>
+                    <p><span>AUTOR:</span> Jenni Punt y Judith A. Owen</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud3.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud3()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Inmunonutrición en la Prevención de la Enfermedad Grave</h3>
+                    <p><span>AUTOR:</span> María Isabel Artigas</p>
+                    
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud4.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud4()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Tratamiento Basado en la Terapia de Aceptación</h3>
+                    <p><span>AUTOR:</span> José Cruz Gaitán</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud5.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud5()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Anatomía Humana, Editorial Interamericana</h3>
+                    <p><span>AUTOR:</span> Juan A. García Porrero</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud6.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud6()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Hacia una Terapia Basada en Procesos</h3>
+                    <p><span>AUTOR:</span> Dra. Olivia Gamarra</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud7.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud7()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Neuronutrición la Ciencia de la Alimentación Inteligente</h3>
+                    <p><span>AUTOR:</span> Diego Sivori Federico</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud8.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud8()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Cómo el Exceso de Antibióticos Aviva las Plagas Modernas</h3>
+                    <p><span>AUTOR:</span> Martin J. Blaser</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud9.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud9()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Enfermedades que Cambiaron la Historia</h3>
+                    <p><span>AUTOR:</span> Pedro Gargantilla</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud10.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud10()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Desarrollo de Habilidades Clínicas</h3>
+                    <p><span>AUTOR:</span> James Morrison</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud1.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud1()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>MINI-NETER Atlas de Anatomía Humana</h3>
+                <p><span class="autor">AUTOR:</span> Frank H. Netter. MD</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud12.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud12()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Atlas de Anatomía Palpatoria</h3>
+                    <p><span>AUTOR:</span> Serge Tixa</p>
+                </div>
+            </div> 
+            
+            <div class="arrow">
+                <button class="left" onclick="left()"><</button>
+
+                <button class="rigth" onclick="right()">></button>
+
+            </div>
+        </div>
+    </section>
+    <audio id="Libro11AudioDetalleSalud">
+        <source src="audio/detalleLibro11Salud.mp3" type="audio/mpeg">
+    </audio>
+    <script src="script.js"></script>
+    <script src="js/daltonismo.js"></script>
+</body>
+</html>

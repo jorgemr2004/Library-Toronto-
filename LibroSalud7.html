@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleDetalle.css">
+    <link rel="stylesheet" href="css/daltonismo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <svg width="0" height="0" style="position:absolute">
+        <defs>
+            <filter id="protanopia">
+                <feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0, 0.558, 0.442, 0, 0, 0, 0, 0.242, 0.758, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="deuteranopia">
+                <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0, 0.7, 0.3, 0, 0, 0, 0, 0.3, 0.7, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="tritanopia">
+                <feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0, 0, 0.433, 0.567, 0, 0, 0, 0.475, 0.525, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+        </defs>
+    </svg>
+    <section class="volver contianer">
+        <button class="volver-btn" onclick="redirectToVolver()"> <i class="fas fa-arrow-left"></i> VOLVER</button>
+    </section>
+    <section class="libros container">
+        <div class="box-detalle-libro1">
+            <div class="box-1 libro1">
+                <div class="contenido-principal">
+                    <img src="imagen/salud7.png" alt="">
+                    <div class="detalle-libro">
+                        <div class="titulo-autor">
+                            <h2>NEURONUTRICIÓN: LA CIENCIA DE LA <br> ALIMENTACIÓN INTELIGENTE</h2>
+                            <h3>Por: <span class="autor"><i class="fas fa-user"></i> DIEGO SIVORI, FEDERICO FROS CAMPELO</span></h3>
+                            <button class="prestar-btn" onclick="redirectToReservar()"> PRESTAR</button>
+                            <h4>Reseña:</h4>
+                            <div class="reseña-container">
+                                <p class="reseña">
+                                ¿Por qué comemos lo que comemos? ¿Qué traemos de fábrica en la cabeza, que de chicos nos <br>
+                                lleva a rechazar las verduras y a no parar de tentarnos con grasas y azúcares? ¿Pueden las <br>
+                                neuronas reentrenarse para adoptar un plan de alimentación saludable? ¿Cómo volver del <br>
+                                súper con los alimentos correctos sin caer en las trampas del mercado? ¿Es el sobrepeso <br>
+                                "contagioso" por culpa de nuestro cerebro? Diego Sívori un nutricionista experto en obesidad <br>
+                                y en marketing de la salud que desarrolla recetas creativas y Federico Fros Campelo un <br>
+                                ingeniero industrial que sabe cómo se fabrican y venden los alimentos hoy y que, además, <br>
+                                investiga el funcionamiento de nuestro cerebro responden de forma práctica estas preguntas, <br>
+                                combinando la Nutrición con la Neurociencia del consumo en recetas cotidianas y con un <br>
+                                lenguaje accesible. A partir de saber cómo funciona tu cerebro (y el de tus hijos) en relación <br>
+                                con la comida, vas a aprender a comer mejor. La posibilidad de alimentarte de manera <br>
+                                inteligente está en tus manos: precisamente en este libro.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="datos-libro" style="margin-top: -115px;">
+                    <p><strong>ISBN:</strong> 7931019</p>
+                    <p><strong>Autores:</strong> DIEGO SIVORI, FEDERICO FROS CAMPELO</p>
+                    <p><strong>Editorial:</strong> Debol$!llo</p>
+                    <p><strong>Materia:</strong> Nutrición</p>
+                    <p><strong>Año:</strong> 2019</p>
+                    <p><strong>Idioma:</strong> Español</p>
+                    <p><strong>Páginas:</strong> 336</p>
+                    <p><strong>Encuadernación:</strong> Tapa blanda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h2 class="libro"><i class="fas fa-book"></i> Libros Relacionados</h2>
+    <section class="recomendados-1">
+        
+        <div class="slider-1">
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud2.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud2()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>KUBY Inmunología Octava Edición</h3>
+                    <p><span>AUTOR:</span> Jenni Punt y Judith A. Owen</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud3.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud3()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Inmunonutrición en la Prevención de la Enfermedad Grave</h3>
+                    <p><span>AUTOR:</span> María Isabel Artigas</p>
+                    
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud4.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud4()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Tratamiento Basado en la Terapia de Aceptación</h3>
+                    <p><span>AUTOR:</span> José Cruz Gaitán</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud5.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud5()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Anatomía Humana, Editorial Interamericana</h3>
+                    <p><span>AUTOR:</span> Juan A. García Porrero</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud6.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud6()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Hacia una Terapia Basada en Procesos</h3>
+                    <p><span>AUTOR:</span> Dra. Olivia Gamarra</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud1.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud1()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>MINI-NETER Atlas de Anatomía Humana</h3>
+                <p><span class="autor">AUTOR:</span> Frank H. Netter. MD</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud8.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud8()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Cómo el Exceso de Antibióticos Aviva las Plagas Modernas</h3>
+                    <p><span>AUTOR:</span> Martin J. Blaser</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud9.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud9()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Enfermedades que Cambiaron la Historia</h3>
+                    <p><span>AUTOR:</span> Pedro Gargantilla</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud10.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud10()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Desarrollo de Habilidades Clínicas</h3>
+                    <p><span>AUTOR:</span> James Morrison</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud11.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud11()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>El Daño Cerebral Invisible Alteraciones cognitivas</h3>
+                    <p><span>AUTOR:</span> Álvaro Bilbao</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud12.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud12()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Atlas de Anatomía Palpatoria</h3>
+                    <p><span>AUTOR:</span> Serge Tixa</p>
+                </div>
+            </div> 
+            
+            <div class="arrow">
+                <button class="left" onclick="left()"><</button>
+
+                <button class="rigth" onclick="right()">></button>
+
+            </div>
+        </div>
+    </section>
+    <audio id="Libro7AudioDetalleSalud">
+        <source src="audio/detalleLibro7Salud.mp3" type="audio/mpeg">
+    </audio>
+    <script src="script.js"></script>
+    <script src="js/daltonismo.js"></script>
+</body>
+</html>

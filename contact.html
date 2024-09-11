@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BIBLIOTECA TORONTO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link href="img/favicon.ico" rel="shortcut icon"/>
+ 
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/owl.carousel.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/daltonismo.css"/>
+
+
+
+</head>
+<body>
+    <svg width="0" height="0" style="position:absolute">
+        <defs>
+            <filter id="protanopia">
+                <feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0, 0.558, 0.442, 0, 0, 0, 0, 0.242, 0.758, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="deuteranopia">
+                <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0, 0.7, 0.3, 0, 0, 0, 0, 0.3, 0.7, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="tritanopia">
+                <feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0, 0, 0.433, 0.567, 0, 0, 0, 0.475, 0.525, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+        </defs>
+    </svg>
+
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+
+    <header class="header-section">
+        <div class="container">
+
+            <a class="site-logo" href="index.html">
+                <img src="img/logo.png" alt="">
+            </a>
+            <div style="font-size: 20px;">
+            	<div style="height: 10px;"></div>
+            </div>
+
+            <div class="nav-switch">
+                <i class="fa fa-bars"></i>
+            </div>
+
+            <nav class="main-menu">
+                <ul>
+                    <select id="daltonismoSelector" onchange="setDaltonismoOption(this.value)">
+						<option value="none">Corrección visual</option>
+						<option value="deuteranopia">Deuteranopia</option>
+						<option value="protanopia">Protanopia</option>
+						<option value="tritanopia">Tritanopia</option>
+					</select>
+                    <li class="inicio"><a href="index.html" onclick="redirectToInicio()">Inicio</a></li>
+					<li class="libros"><a href="Libros.html" onclick="redirectToLibros()">Libros</a></li>
+					<li class="reservar"><a href="categories.html" onclick="redirectToReservar()">Reservar</a></li>
+					<li class="contactanos"><a href="contact.html" onclick="redirectToContactanos()">Contáctanos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <audio id="Inicio">
+        <source src="audio/Inicio.mp3" type="audio/mpeg">
+    </audio>
+	<audio id="Libros">
+        <source src="audio/Libros.mp3" type="audio/mpeg">
+    </audio>
+	<audio id="Reservar">
+        <source src="audio/Reservar.mp3" type="audio/mpeg">
+    </audio>
+	<audio id="Contactanos">
+        <source src="audio/Contactanos.mp3" type="audio/mpeg">
+    </audio>
+	<audio id="bienvenidoInicio">
+        <source src="audio/bienvenidoInicio.mp3" type="audio/mpeg">
+    </audio>
+	<audio id="navegacion">
+        <source src="audio/navegacion.mp3" type="audio/mpeg">
+    </audio>
+    
+
+    <section class="page-info-section set-bg" data-setbg="img/page-top-bg/5.jpg">
+        <div class="pi-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-6 text-white">
+                        <h2>Contáctanos</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section spad contact-page">
+        
+        <h2 class="section-title">¿Necesitas ayuda? ¡Contáctanos!</h2>
+        <p style="text-align: center; font-size: 20px;">¡Estamos aquí para ayudarte en todo lo que necesites! Ya sea que tengas preguntas sobre nuestros servicios o necesites asistencia para encontrar recursos específicos o simplemente quieras dejarnos tus comentarios, ¡no dudes en ponerte en contacto con nosotros!</p>
+
+        <div style="height: 20px;"></div>
+        <div style="height: 20px;"></div>
+        <h4 class="section-title">INFORMACIÓN</h4>
+            
+        <section id="page-contact" data-speed="12" data-type="background" style="background-position: 50% -965.583px;">
+            
+            <div class="container">
+                <div class="row">
+                    <p class="animated fadeIn" data-animation="fadeIn" style="font-size: 17px; font-family: OpenSans-Regular; opacity: 500;"></p>
+
+                    <div class="col-lg-4" style="text-align: left">
+                        <p style="font-size: 21px;">Dirección:</p>
+                        Av. Tingo María 1122<br>
+                        Lima 15083, Cercado de Lima<br>
+                        Sede Breña<br><br>
+                    </div>
+                    <div class="col-lg-4" style="text-align: left">
+                        <p style="font-size: 21px;">Teléfonos:</p>
+                        +51 963 209 259 / +51 936 560 959<br><br>
+                    </div>
+                    <div class="col-lg-4" style="text-align: left">
+                        <p style="font-size: 21px;">Correos:</p>
+                        - gabrielsamuel2003b@gmail.com<br>
+                        - bibliotecatoronto1960@gmail.com<br>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- MAPA: -->
+        <div id="content" class="no-bottom no-top">
+            <section id="page-about">
+                <div class="container">
+                    <div id="content" class="no-bottom no-top">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.7752047692193!2d-77.05986874159166!3d-12.058982131221375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c9272c9c5c5d%3A0xaf8dd28c21c20d4f!2sNorthern%20Private%20University!5e0!3m2!1sen!2spe!4v1714942533989!5m2!1sen!2spe" title="Calle Las Granadas 4011 INT. 201 URB. Micaela Bastidas, Los Olivos" aria-label="Calle Las Granadas 4011 INT. 201 URB. Micaela Bastidas, Los Olivos" width="1100" height="550" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+		<div style="height: 20px;"></div>
+        <div style="height: 20px;"></div>
+        <div class="col-md-12 text-center">
+            <div class="social-links">
+                <a href="https://www.facebook.com/torontopubliclibrary/" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/torontolibrary" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.instagram.com/torontolibrary" target="_blank"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+
+   
+        <!-- FIN DEL MAPA -->
+
+    </section>
+
+
+    <section class="footer-top-section">
+        <div class="container">
+            <div class="footer-top-bg">
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-logo text-white">
+                        <img src="img/footer-logo.png" alt="">
+                        <p>Sus comentarios nos ayudan a avanzar; sabemos que desean aprender y les brindaremos los servicios necesarios para que eso sea posible.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget mb-5 mb-md-0">
+                        <h4 class="fw-title">Últimas Publicaciones</h4>
+                        <div class="latest-blog">
+                            <div class="lb-item">
+                                <div class="lb-thumb set-bg" data-setbg="img/latest-blog/1.jpg"></div>
+                                <div class="lb-content">
+                                    <div class="lb-date">21 de Octubre de 2018</div>
+                                    <p>Los estudiantes de la famosa Universidad UPN son los que usan más nuestros servicios en lo que va del año 2018.</p>
+                                    <a href="#" class="lb-author">Gabriel Niño de Guzmán</a>
+                                </div>
+                            </div>
+                            <div class="lb-item">
+                                <div class="lb-thumb set-bg" data-setbg="img/latest-blog/2.jpg"></div>
+                                <div class="lb-content">
+                                    <div class="lb-date">7 de Junio de 2020</div>
+                                    <p>Estamos forjando nuestros convenios con otras universidades e institutos; atentos a las publicaciones.</p>
+                                    <a href="#" class="lb-author">Guillermo Novoa</a>
+                                </div>
+                            </div>
+                            <div class="lb-item">
+                                <div class="lb-thumb set-bg" data-setbg="img/latest-blog/3.jpg"></div>
+                                <div class="lb-content">
+                                    <div class="lb-date">18 de Julio de 2021</div>
+                                    <p>Después de tanta espera, podemos afirmar que tendremos convenio con el Instituto Zegel Ipae.</p>
+                                    <a href="#" class="lb-author">Mirella Matsuo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="fw-title">Comentarios</h4>
+                        <div class="top-comment">
+                            <div class="tc-item">
+                                <div class="tc-thumb set-bg" data-setbg="img/authors/1.jpg"></div>
+                                <div class="tc-content">
+                                    <p><a href="#">Jose Quispe</a> <span>Comenta</span>  Me encanta el sistema y la gente</p>
+									<div class="tc-date">6 de Agosto de 2018</div>
+								</div>
+							</div>
+							<div class="tc-item">
+								<div class="tc-thumb set-bg" data-setbg="img/authors/2.jpg"></div>
+								<div class="tc-content">
+									<p><a href="#">Carlos Condorcanqui</a> <span>Comenta</span>  Esperare a las actualizaciones quiero saber con quien mas tendra convenios esta bibliotequita</p>
+									<div class="tc-date">31 de Noviembre de 2020</div>
+								</div>
+							</div>
+							<div class="tc-item">
+								<div class="tc-thumb set-bg" data-setbg="img/authors/3.jpg"></div>
+								<div class="tc-content">
+									<p><a href="#">Antuanet Huaman</a> <span>Comenta</span>  Ire a darme un paseo por la biblioteca</p>
+									<div class="tc-date">26 de Diciembre de 2020</div>
+								</div>
+							</div>
+							<div class="tc-item">
+								<div class="tc-thumb set-bg" data-setbg="img/authors/4.jpg"></div>
+								<div class="tc-content">
+									<p><a href="#">Jose Jose</a> <span>Comenta</span>  Reservare algunos libros para mi hija...</p>
+									<div class="tc-date">29 de Febrero de 2021</div>
+                                    <div style="height: 20px;"></div>
+								<div style="height: 20px;"></div>
+								<div style="height: 20px;"></div>
+								<div style="height: 12px;"></div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="footer-section">
+        <div class="container">
+            <ul class="footer-menu">
+                <li><a href="index.html">Inicio</a></li>
+				<li><a href="review.html">Servicios</a></li>
+				<li><a href="categories.html">Reservar</a></li>
+				<li><a href="contact.html">Contáctanos</a></li>
+            </ul>
+            <p class="copyright">
+
+                <i class="fa fa-heart-o" aria-hidden="true"></i>  <a href="" target="_blank"></a>
+
+            </p>
+        </div>
+    </footer>
+
+    <script src="java.js"></script>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.marquee.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/daltonismo.js"></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleDetalle.css">
+    <link rel="stylesheet" href="css/daltonismo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <svg width="0" height="0" style="position:absolute">
+        <defs>
+            <filter id="protanopia">
+                <feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0, 0.558, 0.442, 0, 0, 0, 0, 0.242, 0.758, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="deuteranopia">
+                <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0, 0.7, 0.3, 0, 0, 0, 0, 0.3, 0.7, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="tritanopia">
+                <feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0, 0, 0.433, 0.567, 0, 0, 0, 0.475, 0.525, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+        </defs>
+    </svg>
+    <section class="volver contianer">
+        <button class="volver-btn" onclick="redirectToVolver()"> <i class="fas fa-arrow-left"></i> VOLVER</button>
+    </section>
+    <section class="libros container">
+        <div class="box-detalle-libro1">
+            <div class="box-1 libro1">
+                <div class="contenido-principal">
+                    <img src="imagen/negocio2.png" alt="">
+                    <div class="detalle-libro">
+                        <div class="titulo-autor">
+                            <h2>La primera crisis financiera internacional <br> del siglo XXI</h2>
+                            <h3>Por: <span class="autor"><i class="fas fa-user"></i> Carlos Parodi Trece</span></h3>
+                            <button class="prestar-btn" onclick="redirectToReservar()"> PRESTAR</button>
+                            <h4>Reseña:</h4>
+                            <div class="reseña-container">
+                                <p class="reseña">
+                                La primera crisis financiera internacional del siglo XXI estalló en el 2007 en los <br>
+                                Estados Unidos y otras economías avanzadas. A partir de finales del 2008, adquirió <br>
+                                proporciones globales. Más allá de los detalles que son tratados a lo largo del <br>
+                                libro, guarda semejanzas con eventos anteriores. La burbuja previa alimentada con <br>
+                                un exceso de crédito, la especulación y el estallido en el precio de un activo, en <br>
+                                este caso las viviendas, conforman una secuencia que deja la sensación de que “ha <br>
+                                ocurrido antes”. En esencia, fue una crisis de sobreendeudamiento, que colapsó el <br>
+                                sofisticado sistema financiero de los Estados Unidos, hecho que tuvo efectos <br>
+                                devastadores sobre el sector productivo de la economía. El enfrentamiento de la <br>
+                                crisis con programas de rescate por parte de diversos gobiernos, creó las bases para <br>
+                                los problemas de deuda que seguirían en otras economías, en especial de Europa, hacia <br>
+                                el 2010. Mientras tanto, América Latina y otras economías emergentes, como China y la <br>
+                                India, fueron víctimas de los impactos de la crisis pero no el centro de la misma. La <br>
+                                última experiencia comparable ocurrió en la década de 1930, episodio denominado la Gran <br>
+                                Depresión Mundial.</p>
+                                <button class="mostrar-mas-btn">MOSTRAR MÁS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="datos-libro" style="margin-top: -180px;">
+                    <p><strong>ISBN:</strong> 7931026</p>
+                    <p><strong>Autor:</strong> Carlos Parodi Trece</p>
+                    <p><strong>Editorial:</strong> UNIVERSIDAD DEL PACIFICO</p>
+                    <p><strong>Materia:</strong> Ciencias Sociales e Historia, Crisis financiera global, Economía y Política económica</p>
+                    <p><strong>Año:</strong> 2011</p>
+                    <p><strong>Idioma:</strong> Español</p>
+                    <p><strong>Páginas:</strong> 378</p>
+                    <p><strong>Encuadernación:</strong> Tapa blanda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h2 class="libro"><i class="fas fa-book"></i> Libros Relacionados</h2>
+    <section class="recomendados-1">
+        
+        <div class="slider-1">
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/negocio1.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroNegocio1()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Cómo las economías emergentes sobrevivieron a la crisis</h3>
+                    <p><span class="autor">AUTOR:</span> Carol Wise y Saori N. Katade</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/negocio3.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroNegocio3()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Civilización del Desperdicio Psicoeconomía</h3>
+                    <p><span class="autor">AUTOR:</span> Jorgen Schuldt</p>   
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/negocio4.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroNegocio4()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Ejercicio de Microeconomía: Un Enfoque Didáctico</h3>
+                    <p><span class="autor">AUTOR:</span> Karlos la Serna y Sergio Serván</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/negocio5.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroNegocio5()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Desarrollo Económico y Social</h3>
+                    <p><span class="autor">AUTOR:</span> Cecilia Montes Corazao</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/negocio6.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroNegocio6()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Fundamentos de Macroeconomía</h3>
+                    <p><span class="autor">AUTOR:</span> Karlos La Serna y Sergio Lozano</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/negocio7.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroNegocio7()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Tecnopolítica Económica Análisis y Propuestas</h3>
+                    <p><span class="autor">AUTOR:</span> Germán Alarco Tosoni</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/negocio8.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroNegocio8()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Perú 2011-2022 Economía, Política y Sociedad</h3>
+                    <p><span class="autor">AUTOR:</span> Carlos Parodi Trece</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/negocio9.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroNegocio9()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Los Laberintoa de América Latina</h3>
+                    <p><span class="autor">AUTOR:</span> Carlos Parodi Trece</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/negocio10.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroNegocio10()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>La Desestructuración del Sistema Peruano de Pensiones</h3>
+                    <p><span class="autor">AUTOR:</span> Carla Morano</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/negocio11.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroNegocio11()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Las Estrategias de Negocio que Comparten Empresas</h3>
+                    <p><span class="autor">AUTOR:</span> Eugenio Andres Marchiori</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/negocio12.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroNegocio12()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>SCRUM El Arte de Hacer el Doble de Trabajo en la Mitad de Tiempo</h3>
+                    <p><span class="autor">AUTOR:</span> Jeff Sutherland</p>
+                </div>
+            </div> 
+            
+            <div class="arrow">
+                <button class="left" onclick="left()"><</button>
+
+                <button class="rigth" onclick="right()">></button>
+
+            </div>
+        </div>
+    </section>
+    <audio id="Libro2AudioDetalleNegocio">
+        <source src="audio/detalleLibro2Negocio.mp3" type="audio/mpeg">
+    </audio>
+    <script src="script.js"></script>
+    <script src="js/daltonismo.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleDetalle.css">
+    <link rel="stylesheet" href="css/daltonismo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <svg width="0" height="0" style="position:absolute">
+        <defs>
+            <filter id="protanopia">
+                <feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0, 0.558, 0.442, 0, 0, 0, 0, 0.242, 0.758, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="deuteranopia">
+                <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0, 0.7, 0.3, 0, 0, 0, 0, 0.3, 0.7, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="tritanopia">
+                <feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0, 0, 0.433, 0.567, 0, 0, 0, 0.475, 0.525, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+        </defs>
+    </svg>
+    <section class="volver contianer">
+        <button class="volver-btn" onclick="redirectToVolver()"> <i class="fas fa-arrow-left"></i> VOLVER</button>
+    </section>
+    <section class="libros container">
+        <div class="box-detalle-libro1">
+            <div class="box-1 libro1">
+                <div class="contenido-principal">
+                    <img src="imagen/salud10.png" alt="">
+                    <div class="detalle-libro">
+                        <div class="titulo-autor">
+                            <h2>Manual Para el Desarrollo de Habilidades <br>Clínicas. Casos Prácticos</h2>
+                            <h3>Por: <span class="autor"><i class="fas fa-user"></i> James Morrison</span></h3>
+                            <button class="prestar-btn" onclick="redirectToReservar()"> PRESTAR</button>
+                            <h4>Reseña:</h4>
+                            <div class="reseña-container">
+                                <p class="reseña">
+                                Manual para el desarrollo de habilidades clínicas. Casos prácticos se elaboró con la<br> 
+                                intención de estudiar la manera en cómo se obtiene información de los pacientes y <br>
+                                elaborar un diagnóstico. Para ello, cada uno de los 26 casos en el libro presenta <br>
+                                a una persona con problemas distintos, donde se esquematiza la problemática mediante<br>
+                                una serie de Pasos, Notas (donde se discuten las respuestas a las preguntas <br>
+                                planteadas en los Pasos), Consideraciones (resumen brevemente el objetivo de cada <br>
+                                caso) y Declaraciones (problemas especiales), así como algunas características <br>
+                                adicionales. El libro aborda opciones de tratamiento; eso se debe a sus dos objetivos<br> 
+                                principales: establecer una relación con el paciente y obtener la información<br>
+                                necesaria para hacer un diagnóstico. ¿Cómo se debe usar este manual? Se puede usar<br> 
+                                como un libro de ejercicios mientras se aprende a hacer entrevistas de salud mental,<br> 
+                                se puede utilizar como guía de estudio de temas y principios de salud mental y, <br>
+                                por último, es posible emplearlo como un libro de casos y leerlo sin completar los <br>
+                                ejercicios, sin embargo, el beneficio de la experiencia práctica es doble para los <br>
+                                lectores que elijan realizar los ejercicios mientras revisan el material.</p>
+                                <button class="mostrar-mas-btn">MOSTRAR MÁS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="datos-libro" >
+                    <p><strong>ISBN:</strong> 7931022</p>
+                    <p><strong>Autor:</strong> James Morrison</p>
+                    <p><strong>Editorial:</strong> Manual Moderno</p>
+                    <p><strong>Materia:</strong> Sociología Médica</p>
+                    <p><strong>Año:</strong> 2019</p>
+                    <p><strong>Idioma:</strong> Español</p>
+                    <p><strong>Páginas:</strong> 345</p>
+                    <p><strong>Encuadernación:</strong> Tapa blanda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h2 class="libro"><i class="fas fa-book"></i> Libros Relacionados</h2>
+    <section class="recomendados-1">
+        
+        <div class="slider-1">
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud2.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud2()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>KUBY Inmunología Octava Edición</h3>
+                    <p><span>AUTOR:</span> Jenni Punt y Judith A. Owen</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud3.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud3()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Inmunonutrición en la Prevención de la Enfermedad Grave</h3>
+                    <p><span>AUTOR:</span> María Isabel Artigas</p>
+                    
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud4.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud4()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Tratamiento Basado en la Terapia de Aceptación</h3>
+                    <p><span>AUTOR:</span> José Cruz Gaitán</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud5.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud5()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Anatomía Humana, Editorial Interamericana</h3>
+                    <p><span>AUTOR:</span> Juan A. García Porrero</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud6.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud6()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Hacia una Terapia Basada en Procesos</h3>
+                    <p><span>AUTOR:</span> Dra. Olivia Gamarra</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud7.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud7()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Neuronutrición la Ciencia de la Alimentación Inteligente</h3>
+                    <p><span>AUTOR:</span> Diego Sivori Federico</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud8.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud8()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Cómo el Exceso de Antibióticos Aviva las Plagas Modernas</h3>
+                    <p><span>AUTOR:</span> Martin J. Blaser</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud9.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud9()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Enfermedades que Cambiaron la Historia</h3>
+                    <p><span>AUTOR:</span> Pedro Gargantilla</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud1.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud1()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>MINI-NETER Atlas de Anatomía Humana</h3>
+                <p><span class="autor">AUTOR:</span> Frank H. Netter. MD</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud11.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud11()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>El Daño Cerebral Invisible Alteraciones cognitivas</h3>
+                    <p><span>AUTOR:</span> Álvaro Bilbao</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/salud12.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroSalud12()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Atlas de Anatomía Palpatoria</h3>
+                    <p><span>AUTOR:</span> Serge Tixa</p>
+                </div>
+            </div> 
+            
+            <div class="arrow">
+                <button class="left" onclick="left()"><</button>
+
+                <button class="rigth" onclick="right()">></button>
+
+            </div>
+        </div>
+    </section>
+    <audio id="Libro10AudioDetalleSalud">
+        <source src="audio/detalleLibro10Salud.mp3" type="audio/mpeg">
+    </audio>
+    <script src="script.js"></script>
+    <script src="js/daltonismo.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleDetalle.css">
+    <link rel="stylesheet" href="css/daltonismo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <svg width="0" height="0" style="position:absolute">
+        <defs>
+            <filter id="protanopia">
+                <feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0, 0.558, 0.442, 0, 0, 0, 0, 0.242, 0.758, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="deuteranopia">
+                <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0, 0.7, 0.3, 0, 0, 0, 0, 0.3, 0.7, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="tritanopia">
+                <feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0, 0, 0.433, 0.567, 0, 0, 0, 0.475, 0.525, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+        </defs>
+    </svg>
+    <section class="volver contianer">
+        <button class="volver-btn" onclick="redirectToVolver()"> <i class="fas fa-arrow-left"></i> VOLVER</button>
+    </section>
+    <section class="libros container">
+        <div class="box-detalle-libro1">
+            <div class="box-1 libro1">
+                <div class="contenido-principal">
+                    <img src="imagen/2.png" alt="">
+                    <div class="detalle-libro">
+                        <div class="titulo-autor">
+                            <h2>Algoritmos. Guía Ilustrada Para <br> Programadores y Curiosos</h2>
+                            <h3>Por: <span class="autor"><i class="fas fa-user"></i> Bhargava, Aditya Y.</span></h3>
+                            <button class="prestar-btn" onclick="redirectToReservar()"> PRESTAR</button>
+                            <h4>Reseña:</h4>
+                            <div class="reseña-container">
+                                <p class="reseña">
+                                Un algoritmo no es más que un procedimiento paso a paso para resolver un problema. Los <br> 
+                                algoritmos que se utilizan más a menudo en programación ya han sido descubiertos, <br>
+                                probados y demostrados. Si quiere entenderlos, pero se niega a atravesar densas <br>
+                                demostraciones de varias páginas, este libro es para usted. Una guía completamente <br>
+                                ilustrada que facilita el aprendizaje de los algoritmos más importantes de manera <br>
+                                efectiva para que los pueda aplicar en sus propios programas. Esta es una guía asequible <br>
+                                e ilustrada que enseña cómo aplicar algoritmos comunes a problemas prácticos que <br>
+                                enfrentan a diario los programadores. Comienza con la ordenación y la búsqueda y, a <br>
+                                medida que se desarrollan habilidades para pensar, aborda problemas más complejos, como <br>
+                                la compresión de datos y la inteligencia artificial. Cada ejemplo está cuidadosamente <br>
+                                presentado e incluye útiles diagramas y código en Python, todos comentados.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="datos-libro" style="margin-top: -90px;">
+                    <p><strong>ISBN:</strong> 7931002</p>
+                    <p><strong>Autora:</strong> Bhargava, Aditya Y.</p>
+                    <p><strong>Editorial:</strong> ANAYA MULTIMEDIA</p>
+                    <p><strong>Categorías:</strong> Técnicas De Programación
+                        Algoritmos Y Estructuras De Datos</p>
+                    <p><strong>Año de edición:</strong> 2019</p>
+                    <p><strong>Idioma:</strong> Español</p>
+                    <p><strong>Páginas:</strong> 256</p>
+                    <p><strong>Encuadernación:</strong> Tapa blanda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h2 class="libro"><i class="fas fa-book"></i> Libros Relacionados</h2>
+    <section class="recomendados-1">
+        
+        <div class="slider-1">
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/1.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro1()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Algoritmo. Guía Ilustrada Para Programadores</h3>
+                    <p><span>AUTOR:</span> Aditya Y. Bhargava</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/3.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro3()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Fundamentos de Bases de Datos, 6° Edición</h3>
+                    <p><span>AUTOR:</span> Abraham Silbershaz</p>
+                    
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/4.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro4()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>El Programador Pragmático</h3>
+                    <p><span>AUTOR:</span> David Thomas y Andrew Hunt</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/5.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro5()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>No Me Hagas Pensar, 2° Edición</h3>
+                    <p><span>AUTOR:</span> Steve Krug</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/6.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro6()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Lenguaje de Programación Rust, 2° Edición</h3>
+                    <p><span>AUTOR:</span> Steve Klabnik y Carol Nichols</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/7.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro7()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Python para Análisis de Datos</h3>
+                    <p><span>AUTOR:</span> Wes McKinney</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/8.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro8()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Ingeniería de Software. Un Enfoque Práctico</h3>
+                    <p><span>AUTOR:</span> Roger S. Pressman, Bruce R.Maxim</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/9.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro9()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>JavaScript Elocuente Tercera Actualización</h3>
+                    <p><span>AUTOR:</span> Marijin Haverbeke</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/10.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro10()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>El Libro del Hacker. Edición 2022</h3>
+                    <p><span>AUTOR:</span> María Ángeles Caballero Velazco</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/11.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro11()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Arquitectura de Software:Las Partes difíciles</h3>
+                    <p><span>AUTOR:</span> Neal Ford</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/12.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro12()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Guía Completa de Linux Para Hackers</h3>
+                    <p><span>AUTOR:</span> William Vance</p>
+                </div>
+            </div> 
+            
+            <div class="arrow">
+                <button class="left" onclick="left()"><</button>
+
+                <button class="rigth" onclick="right()">></button>
+
+            </div>
+        </div>
+    </section>
+
+    <audio id="Libro2AudioDetalle">
+        <source src="audio/detalleLibro2.mp3" type="audio/mpeg">
+    </audio>
+    <script src="js/daltonismo.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

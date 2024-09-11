@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleDetalle.css">
+    <link rel="stylesheet" href="css/daltonismo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <svg width="0" height="0" style="position:absolute">
+        <defs>
+            <filter id="protanopia">
+                <feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0, 0.558, 0.442, 0, 0, 0, 0, 0.242, 0.758, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="deuteranopia">
+                <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0, 0.7, 0.3, 0, 0, 0, 0, 0.3, 0.7, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="tritanopia">
+                <feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0, 0, 0.433, 0.567, 0, 0, 0, 0.475, 0.525, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+        </defs>
+    </svg>
+    <section class="volver contianer">
+        <button class="volver-btn" onclick="redirectToVolver()"> <i class="fas fa-arrow-left"></i> VOLVER</button>
+    </section>
+    <section class="libros container">
+        <div class="box-detalle-libro1">
+            <div class="box-1 libro1">
+                <div class="contenido-principal">
+                    <img src="imagen/derecho7.png" alt="">
+                    <div class="detalle-libro">
+                        <div class="titulo-autor">
+                            <h2>Gobierno de la Justicia. El <br>Consejo General del Poder Judicial.</h2>
+                            <h3>Por: <span class="autor"><i class="fas fa-user"></i> Ernesto Pedraz Penalva</span></h3>
+                            <h4>Reseña:</h4>
+                            <div class="reseña-container">
+                                <p class="reseña">
+                                CONGRESO INTERNACIONAL DE DERECHO PROCESAL DE CASTILLA <br>
+                                Y LEÓN. UNIVERSIDAD DE VALLADOLID. 28, 29 Y 30 DE SETIEMBRE DE 1994.</p>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="datos-libro" style="margin-top: 5px;">
+                    <p><strong>ISBN:</strong> 7931043</p>
+                    <p><strong>Autor:</strong> Ernesto Pedraz Penalva</p>
+                    <p><strong>Editorial:</strong> Ediciones Universidad De Valladolid</p>
+                    <p><strong>Materia:</strong> Proceso Civil Del Ordenamiento Jurídico</p>
+                    <p><strong>Año:</strong> 1996</p>
+                    <p><strong>Idioma:</strong> Español</p>
+                    <p><strong>Páginas:</strong> 590</p>
+                    <p><strong>Encuadernación:</strong> Tapa blanda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h2 class="libro"><i class="fas fa-book"></i> Libros Relacionados</h2>
+    <section class="recomendados-1">
+        
+        <div class="slider-1">
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/derecho2.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroDerecho2()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Derecho Laboral Individual Parte General y Pensiones</h3>
+                    <p><span class="autor">AUTOR:</span> Juan Martinez</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/derecho3.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroDerecho3()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>El Sistema Interamericano de Derechos Humanos</h3>
+                    <p><span class="autor">AUTOR:</span> Claudio Rojas</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/derecho4.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroDerecho4()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Constitucionalismo, Descolonización y Pluralismo Jurídico</h3>
+                    <p><span class="autor">AUTOR:</span> Antonio Wolkmer</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/derecho5.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroDerecho5()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Elementos en el impuesto de la renta de las sociedades</h3>
+                <p><span class="autor">AUTOR:</span> Javier García</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/derecho6.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroDerecho6()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Marketing para Abogados Escépticos</h3>
+                    <p><span class="autor">AUTOR:</span> David Pérez</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/derecho1.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroDerecho1()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Una Crítica a las Recetas de la Mano Dura</h3>
+                    <p><span class="autor">AUTOR:</span> Claudia Cesaroni</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/derecho8.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroDerecho8()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Manual de Derecho Municipal</h3>
+                    <p><span class="autor">AUTOR:</span> Marcelo Abarzúa</p>
+                </div>
+            </div>
+            
+            <div class="arrow">
+                <button class="left" onclick="left()"></button>
+
+                <button class="rigth" onclick="right()">></button>
+
+            </div>
+        </div>
+    </section>
+    <script src="js/daltonismo.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

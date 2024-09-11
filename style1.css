@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* Estilos generales */
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.header-section {
+	background: #131313;
+	clear: both;
+	overflow: hidden;
+    padding: 0px 0;
+	border-bottom: 2px solid #ffb320; 
+}
+
+.site-logo {
+	display: inline-block;
+	float: left;
+	padding-top: 5px;
+    margin-right: 180px; /* Espacio a la derecha del logo */
+}
+
+.user-panel {
+	float: right;
+	font-weight: 500;
+	background: #ffb320;
+	padding: 8px 28px;
+	border-radius: 30px;
+}
+
+.user-panel a {
+	font-size: 14px;
+	color: #131313;
+}
+
+.main-menu {
+	float: right;
+	margin-right: 120px; /* Mover el menú 50px más a la izquierda */
+}
+
+.main-menu ul {
+	list-style: none;
+}
+
+.main-menu ul li {
+	display: inline;
+}
+
+.main-menu ul li a {
+	display: inline-block;
+	font-size: 16px;
+	color: #fff;
+	margin-left: 35px;
+	font-weight: 500;
+	padding: 10px 5px;
+    text-decoration: none;
+}
+
+.main-menu ul li a:hover {
+	color: #ffb320;
+}
+
+.header-btn {
+	float: right;
+	margin-right: 0;
+}
+
+.nav-switch {
+	display: none;
+}
+
+
+
+.audio-icon {
+    position: absolute;
+    top: 10px; /* Ajusta la distancia desde la parte superior */
+    left: 10px; /* Ajusta la distancia desde la izquierda */
+    color: black; /* Color del icono */
+    background-color: white; /* Fondo blanco */
+    padding: 10px; /* Ajusta el padding según sea necesario */
+    border-radius: 50%; /* Forma circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.audio-icon i {
+    font-size: 15px; /* Tamaño del icono */
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho y alto total */
+    width: 100%;
+}
+
+/* Estilos para la sección de filtros */
+.filtros {
+    flex: 1;
+    height: auto;
+    max-width: 340px; /* Ancho máximo para la sección de filtros */
+    margin-right: 10px; /* Espacio entre las secciones */
+}
+
+.side-card {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 290px; /* Ancho máximo fijo */
+    height: 250px;
+    box-sizing: border-box;
+    box-shadow: 0 0 15px rgba(128, 128, 128, 0.5); /* Sombra gris con efecto iluminado */
+}
+
+
+.side-card h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.side-card hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.side-card h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.side-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #868686;
+}
+
+.category-options {
+    display: none; /* Ocultar las opciones de categoría por defecto */
+}
+
+.category-options.active {
+    display: block; /* Mostrar las opciones de categoría cuando tienen la clase 'active' */
+}
+
+.category-options p {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.category-options p.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos para la sección de libros */
+.libros {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px 0 0; /* Asegura que haya padding solo en la parte superior y derecha */
+    box-sizing: border-box; 
+}
+
+.libros h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.libros hr {
+    border: none;
+    border-top: 2px solid #333;
+    margin-top: 10px;
+}
+
+
+.box-container-1 {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+    margin-top: -330px;
+    margin-left: 350px;
+}
+
+.box-1 {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    
+}
+
+
+
+.box-1 img {
+    width: 200px;
+    height: 300px;
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.box-1 h3 {
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.box-1 p {
+    font-size: 14px;
+    margin-top: -5px;
+}
+
+.box-1 p .autor {
+    font-weight: bold;
+    color: #FC5C39;
+}
+
+
+
+.load-more {
+    margin-top: 40px;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 15px;
+    border: 1px solid #FC5C39;
+    color: #FC5C39;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-right: 410px;
+}
+
+.load-more:hover {
+    background-color: #FC5C39;
+    color: #FFFFFF;
+}
+
+
+/*es la parte cuando mi mouse pasa al libro que salga borroso*/
+.box-1 .book-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.box-1 .book-container .ver-detalle-btn {
+    position: absolute;
+    bottom: 125px; /* Ajusta la distancia desde abajo según sea necesario */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%);
+    width: calc(100% - 16px); /* Ajusta el ancho del botón al ancho del contenedor */
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo con transparencia */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 8px 0; /* Ajusta el padding vertical */
+    font-size: 14px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cursor de puntero al pasar sobre el botón */
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+    border-radius: 5px; /* Bordes redondeados */
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto */
+    outline: none; /* Elimina el borde puntiagudo al hacer clic */
+}
+
+.box-1 .book-container:hover .ver-detalle-btn {
+    opacity: 1; /* Hace visible el botón de ver detalle al pasar el cursor */ 
+    background-color: white; 
+    color: #05080a;
+}
+
+.box-1.active .book-container .ver-detalle-btn {
+    opacity: 1; /* Hace visible el botón de ver detalle al simular cursor dentro */
+    background-color: white; 
+    color: #05080a;
+}
+
+/*----------------------
+  Footer Section
+------------------------*/
+
+.footer-section {
+	padding: 18px 0 16px;
+	overflow: hidden;
+	background: #252525;
+}
+
+.footer-menu {
+	list-style: none;
+	float: right;
+}
+
+.footer-menu li {
+	display: inline;
+}
+
+.footer-menu li a {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 500;
+	color: #aeaeae;
+	margin-left: 30px;
+    text-decoration: none;
+}
+
+.copyright {
+	float: left;
+	margin-bottom: 0;
+	font-weight: 500;
+	color: #aeaeae;
+}
+
+
+
+/* Para pantallas muy grandes */
+@media (min-width: 1400px) {
+    .box-container-1 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* Para pantallas grandes */
+@media (max-width: 1399px) and (min-width: 1200px) {
+    .box-container-1 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Para pantallas medianas */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .box-container-1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 767px) {
+    .box-container-1 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .filtros {
+        flex: 1;
+        height: auto;
+        max-width: 30px; /* Cambia el ancho máximo de la sección de filtros */
+        margin-right: 10px; /* Espacio entre las secciones */
+    }
+
+}

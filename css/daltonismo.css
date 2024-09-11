@@ -1,0 +1,11 @@
+body.deuteranopia {
+    filter: url('#deuteranopia');
+}
+
+body.protanopia {
+    filter: url('#protanopia');
+}
+
+body.tritanopia {
+    filter: url('#tritanopia');
+}

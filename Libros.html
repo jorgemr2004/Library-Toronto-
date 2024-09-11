@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="css/daltonismo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <svg width="0" height="0" style="position:absolute">
+        <defs>
+            <filter id="protanopia">
+                <feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0, 0.558, 0.442, 0, 0, 0, 0, 0.242, 0.758, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="deuteranopia">
+                <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0, 0.7, 0.3, 0, 0, 0, 0, 0.3, 0.7, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="tritanopia">
+                <feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0, 0, 0.433, 0.567, 0, 0, 0, 0.475, 0.525, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+        </defs>
+    </svg>
+    <div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<header class="header-section">
+		<div class="container">
+			<a class="site-logo" href="index.html">
+				<img src="img/logo.png" alt="">
+			</a>
+			<div style="font-size: 20px;">
+                <div style="height: 10px;"></div>
+			</div>
+
+			<div class="nav-switch">
+				<i class="fa fa-bars"></i>
+			</div>
+			<nav class="main-menu">
+				<ul>
+                    <select id="daltonismoSelector" onchange="setDaltonismoOption(this.value)">
+						<option value="none">Corrección visual</option>
+						<option value="deuteranopia">Deuteranopia</option>
+						<option value="protanopia">Protanopia</option>
+						<option value="tritanopia">Tritanopia</option>
+					</select>
+					<li class="inicio"><a href="index.html" onclick="redirectToInicio()">Inicio</a></li>
+					<li class="libros"><a href="Libros.html" onclick="redirectToLibros()">Libros</a></li>
+					<li class="reservar"><a href="categories.html" onclick="redirectToReservar()">Reservar</a></li>
+					<li class="contactanos"><a href="contact.html" onclick="redirectToContactanos()">Contáctanos</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+    <audio id="Inicio">
+        <source src="audio/Inicio.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Libros">
+        <source src="audio/Libros.mp3" type="audio/mpeg">
+    </audio>
+	<audio id="Reservar">
+        <source src="audio/Reservar.mp3" type="audio/mpeg">
+    </audio>
+	<audio id="Contactanos">
+        <source src="audio/Contactanos.mp3" type="audio/mpeg">
+    </audio>
+	<audio id="bienvenidoInicio">
+        <source src="audio/bienvenidoInicio.mp3" type="audio/mpeg">
+    </audio>
+	<audio id="navegacion">
+        <source src="audio/navegacion.mp3" type="audio/mpeg">
+    </audio>
+
+    <h2 style="text-align: center;">LIBROS</h2>
+    <section class="filtros container">
+        <aside class="side-card">
+            <div class="card">
+                <h3><i class="fas fa-filter"></i> FILTROS</h3>
+                <hr>
+                <h4 class="category-header" data-target="#categoria1">CATEGORÍAS</h4>
+                <div id="categoria1" class="category-options">
+                    <p><input type="checkbox" data-category="ingenieria" id="category-ingenieria-header">Ingenierías</p>
+                    <p><input type="checkbox" data-category="salud" id="category-salud-header">Ciencias de la Salud</p>
+                    <p><input type="checkbox" data-category="negocio" id="category-negocio-header">Ciencias Económicas y de la Gestión</p>
+                    <p><input type="checkbox" data-category="derecho" id="category-derecho-header">Ciencias Jurídicas y Sociales</p>
+                </div>
+                <hr>
+            </div>
+        </aside>
+    </section>
+
+    <section class="libros container">
+        <hr>
+        <div class="box-container-1">
+            <!--Ingeniería-->
+            <div class="box-1 category-ingenieria" id="libro_1">
+                <div class="book-container">
+                    <img src="imagen/1.png" alt=""> 
+                    <div class="audio-icon">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <h3>Estructuras de Datos y <br>Algoritmos</h3>
+                    <p><span class="autor">AUTOR:</span> Mariona Nadal Farré</p>
+                    <button class="ver-detalle-btn" onclick="redirectToLibro1()">Ver libro</button>
+                </div>
+            </div>
+            <!--Salud--> 
+            <div class="box-1 category-salud" id="salud_1">
+            <div class="book-container">
+                <img src="imagen/salud1.png" alt="">
+                <h3>MINI-NETER Atlas de Anatomía Humana</h3>
+                <p><span class="autor">AUTOR:</span> Frank H. Netter. MD</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroSalud1()">Ver libro</button>
+            </div>
+            </div>
+            <!--Negocio--> 
+            <div class="box-1 category-negocio" id="negocio_1">
+            <div class="book-container">
+                <img src="imagen/negocio1.png" alt="">
+                <div class="audio-icon">
+                    <i class="fas fa-headphones"></i>
+                </div>
+                <h3>Cómo las economías emergentes sobrevivieron a la crisis</h3>
+                <p><span class="autor">AUTOR:</span> Carol Wise y Saori N. Katade</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroNegocio1()" style="position: relative; top: -205px;">Ver libro</button>
+            </div>
+            </div>
+            <!--Derecho--> 
+            <div class="box-1 category-derecho" id="derecho_1">
+            <div class="book-container">
+                <img src="imagen/derecho1.png" alt="">
+                <h3>Una Crítica a las Recetas de la Mano Dura</h3>
+                <p><span class="autor">AUTOR:</span> Claudia Cesaroni</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroDerecho1()">Ver libro</button>
+            </div>
+            </div>
+
+            <!--Ingeniería-->
+            <div class="box-1 category-ingenieria" id="libro_2">
+            <div class="book-container">
+                <img src="imagen/2.png" alt="">
+                <h3>Algoritmo. Guía Ilustrada<br> Para Programadores</h3>
+                <p><span class="autor">AUTOR:</span> Aditya Y. Bhargava</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibro2()" style="position: relative; top: -185px;">Ver libro</button>
+            </div>
+            </div>
+            <!--Salud--> 
+            <div class="box-1 category-salud" id="salud_2">
+            <div class="book-container">
+                <img src="imagen/salud2.png" alt="">
+                <div class="audio-icon">
+                    <i class="fas fa-headphones"></i>
+                </div>
+                <h3>KUBY Inmunología Octava Edición</h3>
+                <p><span class="autor">AUTOR:</span> Jenni Punt y Judith A. Owen</p>
+                <button class="ver-detalle-btn"  onclick="redirectToLibroSalud2()" style="position: relative; top: -180px;">Ver libro</button>
+            </div>
+            </div>
+            <!--Negocio--> 
+            <div class="box-1 category-negocio" id="negocio_2">
+            <div class="book-container">
+                <img src="imagen/negocio2.png" alt="">
+                <h3>La Primera Crisis Financiera Internacional del Siglo XXI</h3>
+                <p><span class="autor">AUTOR:</span> Carlos Parodi</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroNegocio2()" style="position: relative; top: -185px;">Ver libro</button>
+            </div>
+            </div>
+            <!--Derecho--> 
+            <div class="box-1 category-derecho" id="derecho_2">
+            <div class="book-container">
+                <img src="imagen/derecho2.png" alt="">
+                <h3>Derecho Laboral Individual Parte General y Pensiones</h3>
+                <p><span class="autor">AUTOR:</span> Juan Martinez</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroDerecho2()" style="position: relative; top: -185px;">Ver libro</button>
+            </div>
+            </div>
+
+            <!--Ingeniería-->
+            <div class="box-1 category-ingenieria" id="libro_3">
+            <div class="book-container">
+                <img src="imagen/3.png" alt="">
+                <h3>Fundamentos de Bases<br> de Datos, 6° Edición</h3>
+                <p><span class="autor">AUTOR:</span> Abraham Silbershaz</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibro3()">Ver libro</button>
+            </div>
+            </div>
+            <!--Salud--> 
+            <div class="box-1 category-salud" id="salud_3">
+            <div class="book-container">
+                <img src="imagen/salud3.png" alt="">
+                <h3>Inmunonutrición en la Prevención de la Enfermedad Grave</h3>
+                <p><span class="autor">AUTOR:</span> María Isabel Artigas</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroSalud3()" style="position: relative; top: -185px;">Ver libro</button>
+            </div>
+            </div>
+            <!--Negocio--> 
+            <div class="box-1 category-negocio" id="negocio_3">
+            <div class="book-container">
+                <img src="imagen/negocio3.png" alt="">
+                <h3>Civilización del Desperdicio Psicoeconomía</h3>
+                <p><span class="autor">AUTOR:</span> Jorgen Schuldt</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroNegocio3()" style="position: relative; top: -185px;">Ver libro</button>
+            </div>
+            </div>
+            <!--Derecho--> 
+            <div class="box-1 category-derecho" id="derecho_3">
+            <div class="book-container">
+                <img src="imagen/derecho3.png" alt="">
+                <h3>El Sistema Interamericano de Derechos Humanos</h3>
+                <p><span class="autor">AUTOR:</span> Claudio Rojas</p>
+                <button class="ver-detalle-btn"  onclick="redirectToLibroDerecho3()" style="position: relative; top: -185px;">Ver libro</button>
+            </div>
+            </div>
+
+            <!--Ingeniería-->
+            <div class="box-1 category-ingenieria" id="libro_4">
+            <div class="book-container">
+                <img src="imagen/4.png" alt="">
+                <h3>El Programador<br> Pragmático</h3>
+                <p><span class="autor">AUTOR:</span> David Thomas <br>Andrew Hunt</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibro4()" style="position: relative; top: -185px;">Ver libro</button>
+            </div>
+            </div>
+            <!--Salud--> 
+            <div class="box-1 category-salud" id="salud_4">
+            <div class="book-container">
+                <img src="imagen/salud4.png" alt="">
+                <h3>Tratamiento Basado en la Terapia de Aceptación</h3>
+                <p><span class="autor">AUTOR:</span> José Cruz Gaitán</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroSalud4()" style="position: relative; top: -185px;">Ver libro</button>
+            </div>
+            </div>
+            <!--Negocio--> 
+            <div class="box-1 category-negocio" id="negocio_4">
+            <div class="book-container">
+                <img src="imagen/negocio4.png" alt="">
+                <h3>Ejercicio de Microeconomía: Un Enfoque Didáctico</h3>
+                <p><span class="autor">AUTOR:</span> Karlos la Serna y Sergio Serván</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroNegocio4()" style="position: relative; top: -205px;">Ver libro</button>
+            </div>
+            </div>
+            <!--Derecho--> 
+            <div class="box-1 category-derecho" id="derecho_4">
+            <div class="book-container">
+                <img src="imagen/derecho4.png" alt="">
+                <h3>Constitucionalismo, Descolonización y Pluralismo Jurídico</h3>
+                <p><span class="autor">AUTOR:</span> Antonio Wolkmer</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroDerecho4()" style="position: relative; top: -185px;">Ver libro</button>
+            </div>
+            </div>
+
+            <!--Ingeniería-->
+            <div class="box-1 category-ingenieria" id="libro_5">
+            <div class="book-container">
+                <img src="imagen/5.png" alt="">
+                <h3>No Me Hagas Pensar,<br>2° Edición</h3>
+                <p><span class="autor">AUTOR:</span> Steve Krug</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibro5()">Ver libro</button>
+            </div>
+            </div>
+            <!--Salud--> 
+            <div class="box-1 category-salud" id="salud_5">
+            <div class="book-container">
+                <img src="imagen/salud5.png" alt="">
+                <h3>Anatomía Humana, Editorial Interamericana</h3>
+                <p><span class="autor">AUTOR:</span> Juan A. García Porrero</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroSalud5()" style="position: relative; top: -180px;">Ver libro</button>
+            </div>
+            </div>
+            <!--Negocio--> 
+            <div class="box-1 category-negocio" id="negocio_5">
+            <div class="book-container">
+                <img src="imagen/negocio5.png" alt="">
+                <h3>Desarrollo Económico y Social</h3>
+                <p><span class="autor">AUTOR:</span> Cecilia Montes Corazao</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroNegocio5()" style="position: relative; top: -180px;">Ver libro</button>
+            </div>
+            </div>
+            <!--Derecho--> 
+            <div class="box-1 category-derecho" id="derecho_5">
+            <div class="book-container">
+                <img src="imagen/derecho5.png" alt="">
+                <h3>Elementos en el impuesto de la renta de las sociedades</h3>
+                <p><span class="autor">AUTOR:</span> Javier García</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroDerecho5()" style="position: relative; top: -185px;">Ver libro</button>
+            </div>
+            </div>
+
+            <!--Ingeniería-->
+            <div class="box-1 category-ingenieria" id="libro_6">
+            <div class="book-container">
+                <img src="imagen/6.png" alt="">
+                <h3>Lenguaje de Programa-<br>ción Rust, 2° Edición</h3>
+                <p><span class="autor">AUTOR:</span> Steve Klabnik y<br> Carol Nichols</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibro6()" style="position: relative; top: -175px;">Ver libro</button>
+            </div>
+            </div>
+            <!--Salud--> 
+            <div class="box-1 category-salud" id="salud_6">
+            <div class="book-container">
+                <img src="imagen/salud6.png" alt="">
+                <h3>Hacia una Terapia Basada en Procesos</h3>
+                <p><span class="autor">AUTOR:</span> Dra. Olivia Gamarra</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroSalud6()">Ver libro</button>
+            </div>
+            </div>
+            <!--Negocio--> 
+            <div class="box-1 category-negocio" id="negocio_6">
+            <div class="book-container">
+                <img src="imagen/negocio6.png" alt="">
+                <h3>Fundamentos de Macroeconomía</h3>
+                <p><span class="autor">AUTOR:</span> Karlos La Serna y Sergio Lozano</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroNegocio6()" style="position: relative; top: -175px;">Ver libro</button>
+            </div>
+            </div>
+            <!--Derecho--> 
+            <div class="box-1 category-derecho" id="derecho_6">
+            <div class="book-container">
+                <img src="imagen/derecho6.png" alt="">
+                <h3>Marketing para Abogados Escépticos</h3>
+                <p><span class="autor">AUTOR:</span> David Pérez</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroDerecho6()">Ver libro</button>
+            </div>
+            </div>
+
+            <!--Ingeniería-->
+            <div class="box-1 category-ingenieria" id="libro_7">
+            <div class="book-container">
+                <img src="imagen/7.png" alt="">
+                <h3>Python para Análisis de Datos</h3>
+                <p><span class="autor">AUTOR:</span> Wes McKinney</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibro7()">Ver libro</button>
+            </div>
+            </div>
+            <!--Salud--> 
+            <div class="box-1 category-salud" id="salud_7">
+            <div class="book-container">
+                <img src="imagen/salud7.png" alt="">
+                <h3>Neuronutrición la Ciencia de la Alimentación Inteligente</h3>
+                <p><span class="autor">AUTOR:</span> Diego Sivori Federico</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroSalud7()" style="position: relative; top: -205px;">Ver libro</button>
+            </div>
+            </div>
+            <!--Negocio--> 
+            <div class="box-1 category-negocio" id="negocio_7">
+            <div class="book-container">
+                <img src="imagen/negocio7.png" alt="">
+                <h3>Tecnopolítica Económica Análisis y Propuestas</h3>
+                <p><span class="autor">AUTOR:</span> Germán Alarco Tosoni</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroNegocio7()" style="position: relative; top: -205px;">Ver libro</button>
+            </div>
+            </div>
+            <!--Derecho--> 
+            <div class="box-1 category-derecho" id="derecho_7">
+            <div class="book-container">
+                <img src="imagen/derecho7.png" alt="">
+                <h3>El Gobierno de la Justicia: El Consejo General del Poder Judicial</h3>
+                <p><span class="autor">AUTOR:</span> Fernando Pedraz</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroDerecho7()" style="position: relative; top: -205px;">Ver libro</button>
+            </div>
+            </div>
+
+            <!--Ingeniería-->
+            <div class="box-1 category-ingenieria" id="libro_8">
+            <div class="book-container">
+                <img src="imagen/8.png" alt="">
+                <h3>Ingeniería de Software. Un Enfoque Práctico</h3>
+                <p><span class="autor">AUTOR:</span> Roger S. Pressman, Bruce R.Maxim</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibro8()" style="position: relative; top: -180px;">Ver libro</button>
+            </div>
+            </div>
+            <!--Salud--> 
+            <div class="box-1 category-salud" id="salud_8">
+            <div class="book-container">
+                <img src="imagen/salud8.png" alt="">
+                <h3>Cómo el Exceso de Antibióticos Aviva las Plagas Modernas</h3>
+                <p><span class="autor">AUTOR:</span> Martin J. Blaser</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroSalud8()" style="position: relative; top: -180px;">Ver libro</button>
+            </div>
+            </div>
+            <!--Negocio--> 
+            <div class="box-1 category-negocio" id="negocio_8">
+            <div class="book-container">
+                <img src="imagen/negocio8.png" alt="">
+                <h3>Perú 2011-2022 Economía, Política y Sociedad</h3>
+                <p><span class="autor">AUTOR:</span> Carlos Parodi Trece</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroNegocio8()" style="position: relative; top: -185px;">Ver libro</button>
+            </div>
+            </div>
+            <!--Derecho--> 
+            <div class="box-1 category-derecho" id="derecho_8">
+            <div class="book-container">
+                <img src="imagen/derecho8.png" alt="">
+                <h3>Manual de Derecho Municipal</h3>
+                <p><span class="autor">AUTOR:</span> Marcelo Abarzúa</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroDerecho8()">Ver libro</button>
+            </div>
+            </div>
+
+            <!--Ingeniería-->
+            <div class="box-1 category-ingenieria" id="libro_9">
+            <div class="book-container">
+                <img src="imagen/9.png" alt="">
+                <h3>JavaScript Elocuente Tercera Actualización</h3>
+                <p><span class="autor">AUTOR:</span> Marijin Haverbeke</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibro9()">Ver libro</button>
+            </div>
+            </div>
+            <!--Salud--> 
+            <div class="box-1 category-salud" id="salud_9">
+            <div class="book-container">
+                <img src="imagen/salud9.png" alt="">
+                <h3>Enfermedades que Cambiaron la Historia</h3>
+                <p><span class="autor">AUTOR:</span> Pedro Gargantilla</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroSalud9()">Ver libro</button>
+            </div>
+            </div>
+            <!--Negocio--> 
+            <div class="box-1 category-negocio" id="negocio_9">
+            <div class="book-container">
+                <img src="imagen/negocio9.png" alt="">
+                <h3>Los Laberintoa de América Latina</h3>
+                <p><span class="autor">AUTOR:</span> Carlos Parodi Trece</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroNegocio9()">Ver libro</button>
+            </div>
+            </div>
+
+            <!--Ingeniería-->
+            <div class="box-1 category-ingenieria" id="libro_10">
+            <div class="book-container">
+                <img src="imagen/10.png" alt="">
+                <h3>El Libro del Hacker. Edición 2022</h3>
+                <p><span class="autor">AUTOR:</span> María Ángeles Caballero Velazco</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibro10()" style="position: relative; top: -180px;">Ver libro</button>
+            </div>
+            </div>
+            <!--Salud--> 
+            <div class="box-1 category-salud" id="salud_10">
+            <div class="book-container">
+                <img src="imagen/salud10.png" alt="">
+                <h3>Desarrollo de Habilidades Clínicas</h3>
+                <p><span class="autor">AUTOR:</span> James Morrison</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroSalud10()">Ver libro</button>
+            </div>
+            </div>
+            <!--Negocio--> 
+            <div class="box-1 category-negocio" id="negocio_10">
+            <div class="book-container">
+                <img src="imagen/negocio10.png" alt="">
+                <h3>La Desestructuración del Sistema Peruano de Pensiones</h3>
+                <p><span class="autor">AUTOR:</span> Carla Morano</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroNegocio10()" style="position: relative; top: -185px;">Ver libro</button>
+            </div>
+            </div>
+
+            <!--Ingeniería-->
+            <div class="box-1 category-ingenieria" id="libro_11">
+            <div class="book-container">
+                <img src="imagen/11.png" alt="">
+                <h3>Arquitectura de Software:Las Partes difíciles</h3>
+                <p><span class="autor">AUTOR:</span> Neal Ford</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibro11()" style="position: relative; top: -185px;">Ver libro</button>
+            </div>
+            </div>
+            <!--Salud--> 
+            <div class="box-1 category-salud" id="salud_11">
+            <div class="book-container">
+                <img src="imagen/salud11.png" alt="">
+                <h3>El Daño Cerebral Invisible Alteraciones cognitivas</h3>
+                <p><span class="autor">AUTOR:</span> Álvaro Bilbao</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroSalud11()" style="position: relative; top: -185px;">Ver libro</button>
+            </div>
+            </div>
+            <!--Negocio--> 
+            <div class="box-1 category-negocio" id="negocio_11">
+            <div class="book-container">
+                <img src="imagen/negocio11.png" alt="">
+                <h3>Las Estrategias de Negocio que Comparten Empresas</h3>
+                <p><span class="autor">AUTOR:</span> Eugenio Andres Marchiori</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroNegocio11()" style="position: relative; top: -205px;">Ver libro</button>
+            </div>
+            </div>
+
+            <!--Ingeniería-->
+            <div class="box-1 category-ingenieria" id="libro_12">
+            <div class="book-container">
+                <img src="imagen/12.png" alt="">
+                <h3>Guía Completa de Linux Para Hackers</h3>
+                <p><span class="autor">AUTOR:</span> William Vance</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibro12()">Ver libro</button>
+            </div>
+            </div>
+            <!--Salud--> 
+            <div class="box-1 category-salud" id="salud_12">
+            <div class="book-container">
+                <img src="imagen/salud12.png" alt="">
+                <h3>Atlas de Anatomía Palpatoria</h3>
+                <p><span class="autor">AUTOR:</span> Serge Tixa</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroSalud12()">Ver libro</button>
+            </div>
+            </div>
+            <!--Negocio--> 
+            <div class="box-1 category-negocio" id="negocio_12">
+            <div class="book-container">
+                <img src="imagen/negocio12.png" alt="">
+                <h3>SCRUM El Arte de Hacer el Doble de Trabajo en la Mitad de Tiempo</h3>
+                <p><span class="autor">AUTOR:</span> Jeff Sutherland</p>
+                <button class="ver-detalle-btn" onclick="redirectToLibroNegocio12()" style="position: relative; top: -185px;">Ver libro</button>
+            </div>
+            </div>
+        </div>
+
+        <div class="load-more" id="load-more-1">MOSTRAR MÁS </div>
+        <hr>
+    </section>
+
+	<footer class="footer-section">
+		<div class="container">
+			<ul class="footer-menu">
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="Libros.html">Libros</a></li>
+				<li><a href="categories.html">Reservar</a></li>
+				<li><a href="contact.html">Contáctanos</a></li>
+			</ul>
+			<p class="copyright">
+				<i class="fa fa-heart-o" aria-hidden="true"></i>  <a href="" target="_blank"></a>
+            </p>
+		</div>
+	</footer>
+
+
+    <!--AUDIO PARA LAS CATEGORIAS-->
+    <audio id="categoria">
+        <source src="audio/categoria.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="DCategoria">
+        <source src="audio/DCategoria.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="SIngenieria">
+        <source src="audio/SIngenieria.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="DIngenieria">
+        <source src="audio/DIngenieria.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="SSalud">
+        <source src="audio/SSalud.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="DSalud">
+        <source src="audio/DSalud.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="SNegocio">
+        <source src="audio/SNegocio.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="DNegocio">
+        <source src="audio/DNegocio.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="SDerecho">
+        <source src="audio/SDerecho.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="DDerecho">
+        <source src="audio/DDerecho.mp3" type="audio/mpeg">
+    </audio>
+
+    <!--AUDIO PARA MIS LIBROS-->
+    <audio id="Libro1">
+        <source src="audio/Libro1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Libro2">
+        <source src="audio/Libro2.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Libro3">
+        <source src="audio/Libro3.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Libro4">
+        <source src="audio/Libro4.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Libro5">
+        <source src="audio/Libro5.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Libro6">
+        <source src="audio/Libro6.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Libro7">
+        <source src="audio/Libro7.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Libro8">
+        <source src="audio/Libro8.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Libro9">
+        <source src="audio/Libro9.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Libro10">
+        <source src="audio/Libro10.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Libro11">
+        <source src="audio/Libro11.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Libro12">
+        <source src="audio/Libro12.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <audio id="LibroSalud1">
+        <source src="audio/LibroSalud1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroSalud2">
+        <source src="audio/LibroSalud2.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroSalud3">
+        <source src="audio/LibroSalud3.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroSalud4">
+        <source src="audio/LibroSalud4.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroSalud5">
+        <source src="audio/LibroSalud5.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroSalud6">
+        <source src="audio/LibroSalud6.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroSalud7">
+        <source src="audio/LibroSalud7.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroSalud8">
+        <source src="audio/LibroSalud8.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroSalud9">
+        <source src="audio/LibroSalud9.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroSalud10">
+        <source src="audio/LibroSalud10.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroSalud11">
+        <source src="audio/LibroSalud11.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroSalud12">
+        <source src="audio/LibroSalud12.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <audio id="LibroNegocio1">
+        <source src="audio/LibroNegocio1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroNegocio2">
+        <source src="audio/LibroNegocio2.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroNegocio3">
+        <source src="audio/LibroNegocio3.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroNegocio4">
+        <source src="audio/LibroNegocio4.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroNegocio5">
+        <source src="audio/LibroNegocio5.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroNegocio6">
+        <source src="audio/LibroNegocio6.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroNegocio7">
+        <source src="audio/LibroNegocio7.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroNegocio8">
+        <source src="audio/LibroNegocio8.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroNegocio9">
+        <source src="audio/LibroNegocio9.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroNegocio10">
+        <source src="audio/LibroNegocio10.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroNegocio11">
+        <source src="audio/LibroNegocio11.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroNegocio12">
+        <source src="audio/LibroNegocio12.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <audio id="LibroDerecho1">
+        <source src="audio/LibroDerecho1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroDerecho2">
+        <source src="audio/LibroDerecho2.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroDerecho3">
+        <source src="audio/LibroDerecho3.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroDerecho4">
+        <source src="audio/LibroDerecho4.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroDerecho5">
+        <source src="audio/LibroDerecho5.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroDerecho6">
+        <source src="audio/LibroDerecho6.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroDerecho7">
+        <source src="audio/LibroDerecho7.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="LibroDerecho8">
+        <source src="audio/LibroDerecho8.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="java.js"></script>
+
+
+<script>
+    // Método 2: Deseleccionar checkboxes al cambiar de página
+    window.addEventListener('beforeunload', function() {
+        const checkboxes = document.querySelectorAll('#categoria1 input[type="checkbox"]');
+        checkboxes.forEach(function(checkbox) {
+            checkbox.checked = false; // Deseleccionar todos los checkboxes al cambiar de página
+        });
+    });
+</script>
+<script src="js/daltonismo.js"></script>
+</body>
+</html>

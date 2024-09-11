@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+    font-family: 'roboto', sans-serif;
+}
+
+.music-player{
+    width: 650px;
+    height: 550px;
+    border-radius: 20px;
+    background: #121212;
+    
+    padding: 30px;
+    overflow: hidden;
+    color: #d5eebb;
+}
+
+.artist-name{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.artist-name{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.disk{
+    position: relative;
+    display: block;
+    margin:  0 auto 20px;
+    width: 220px;
+    height: 310px;
+    border-radius: 10px;
+    background-image: url('imagen/negocio1.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    box-shadow: 0 8px 16px rgb(0, 0, 0); /* Sombreado oscuro con mayor desenfoque */
+}
+
+.song-slider{
+    width: 100%;
+    position: relative;
+    margin:  20px auto;
+}
+
+.seek-bar{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background: #8a928f;
+    overflow: hidden;
+    cursor: pointer;
+}
+.seek-bar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 1px;
+    height: 20px;
+    box-shadow: -400px 0 0 400px #d5eebb;
+}
+
+.current-time,
+.song-duration{
+    font-size: 14px;
+}
+.song-duration{
+    position: absolute;
+    right: 0;
+}
+
+.controls{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+}
+.play-btn{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #d5eebb;
+    cursor: pointer;
+    border: none;
+}
+.play-btn span{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 30px;
+    border-radius: 2px;
+    background: #121212;
+    transition: .5s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.play-btn span:nth-child(2){
+    left: 55%;
+    transform-origin: center;
+}
+
+.play-btn.pause span:nth-child(2){
+    transform: translateY(-50%) scaleY(0);
+}
+.play-btn.pause span:nth-child(1){
+    width: 35%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+}
+.play-btn.pause{
+    animation: pulse 2s linear infinite;
+}
+
+@keyframes pulse {
+    0%{
+        box-shadow: 0;
+    }
+    50%{
+        box-shadow: 0 0 0 5px rgba(255,255,255,0.1);
+    }
+    100%{
+        box-shadow: 0 0 0 5px rgba(255,255,255,0.4);
+    }
+}
+
+@media (max-width: 768px) {
+    .music-player {
+        height: auto;
+        padding: 20px;
+    }
+
+    .disk {
+        height: 50vw;
+        max-height: 310px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .play-btn {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .artist-name {
+        font-size: 16px;
+    }
+
+    .current-time,
+    .song-duration {
+        font-size: 12px;
+    }
+
+    .play-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .play-btn span {
+        width: 8px;
+        height: 25px;
+    }
+}

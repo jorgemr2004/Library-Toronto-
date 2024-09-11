@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <title>BIBLIOTECA TORONTO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="img/favicon.ico" rel="shortcut icon"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/owl.carousel.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+	<link rel="stylesheet" href="css/daltonismo.css"/>
+</head>
+<body>
+	<svg width="0" height="0" style="position:absolute">
+        <defs>
+            <filter id="protanopia">
+                <feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0, 0.558, 0.442, 0, 0, 0, 0, 0.242, 0.758, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="deuteranopia">
+                <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0, 0.7, 0.3, 0, 0, 0, 0, 0.3, 0.7, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="tritanopia">
+                <feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0, 0, 0.433, 0.567, 0, 0, 0, 0.475, 0.525, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+        </defs>
+    </svg>
+    <script>
+        // Función para mostrar el cuadro de diálogo personalizado
+        function mostrarLogin() {
+            Swal.fire({
+                title: 'Iniciar Sesión',
+                html:
+                    '<input id="swal-input1" class="swal2-input" placeholder="Usuario">' +
+                    '<input id="swal-input2" type="password" class="swal2-input" placeholder="Contraseña">',
+                focusConfirm: false,
+                showCancelButton: true,
+                confirmButtonText: 'OK',
+                cancelButtonText: 'Inicio',
+                preConfirm: () => {
+                    const usuario = document.getElementById('swal-input1').value;
+                    const contrasena = document.getElementById('swal-input2').value;
+                    return { usuario: usuario, contrasena: contrasena };
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    const { usuario, contrasena } = result.value;
+                    // Validar usuario y contraseña
+                    if (usuario === 'Administrador' && contrasena === '123') {
+                        // Acceso permitido
+                        Swal.fire('Acceso Permitido', 'Bienvenido Administrador!', 'success');
+                    } else {
+                        // Acceso denegado, mostrar mensaje y volver a llamar a la función
+                        Swal.fire('Acceso Denegado', 'Usuario o contraseña incorrectos', 'error')
+                            .then(() => {
+                                mostrarLogin(); // Llamar recursivamente para mostrar el login nuevamente
+                            });
+                    }
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    // Manejo del botón "Inicio"
+                    window.location.href = 'index.html';
+                } else {
+                    // Si el usuario cancela con otro método, también llamamos recursivamente para mostrar el login nuevamente
+                    mostrarLogin();
+                }
+            });
+        }
+
+        // Llamar a la función para mostrar el cuadro de diálogo al cargar la página (solo para ejemplo)
+        mostrarLogin();
+    </script>
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+
+	<header class="header-section">
+		<div class="container">
+
+			<a class="site-logo" href="index.html">
+				<img src="img/logo.png" alt="">
+			</a>
+			<div style="font-size: 20px;">
+				<div style="height: 10px;"></div>
+			</div>
+
+			<div class="nav-switch">
+				<i class="fa fa-bars"></i>
+			</div>
+
+			<nav class="main-menu">
+				<ul>
+					<select id="daltonismoSelector" onchange="setDaltonismoOption(this.value)">
+						<option value="none">Corrección visual</option>
+						<option value="deuteranopia">Deuteranopia</option>
+						<option value="protanopia">Protanopia</option>
+						<option value="tritanopia">Tritanopia</option>
+					</select>
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="libros.html">Libros</a></li>
+					<li><a href="categories.html">Reservar</a></li>
+					<li><a href="contact.html">Contáctanos</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section class="page-info-section set-bg" data-setbg="img/page-top-bg/1.jpg">
+		<div class="pi-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-5 col-lg-6 text-white">
+						<h2>En este apartado puedes reservar tu libro</h2>
+			
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div style="height: 20px;"></div>
+
+	
+	<div style="text-align: center;"><h2>BASE DE DATOS</h2></div>
+
+
+ 
+	<!------------------------------------------------------------------------------------------------------->
+	<!-------------------------------------------------------------------------------------------------------->
+	<!-------------------------------------------------------------------------------------------------------->
+	<!-------------------------------------------------------------------------------------------------------->
+	<!-------------------------------------------------------------------------------------------------------->
+	<!-------------------------------------------------------------------------------------------------------->
+    <div style="height: 20px;"></div>
+    <p td class="border px-4 py-2" style=" font-size: larger; font-weight: bold;">BUSCAR ESTUDIANTES:</p>
+	<div class="p-4">
+
+        <label for="txtEstudiantess" class="text-lg">ID Estudiante:</label>
+		<input type="text" id="txtid" name="txtid" class="border rounded p-2 ml-2"> 
+        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" onclick="fn_listar_estudiante()" >Mostrar todos</button>
+		<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="fn_listar_estudianteXid()" >Por ID</button>
+        <button class="bg-red-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded ml-2" onclick="limpiarTablaEsudiantes()">Limpiar</button>
+<!-- AGREGE ESTA LINEA PARA QUE HAIGAN 2 BOTONES -->
+	   </div>
+		
+		<div class="overflow-x-auto">
+		<table id="studentTable" class="table-auto w-full border-collapse border">
+			<thead>
+				<tr>
+					<th class="border px-4 py-2">ID Estudiante</th>
+                    <th class="border px-4 py-2">Nombre</th>
+                    <th class="border px-4 py-2">Apellido</th>
+                    <th class="border px-4 py-2">Cantidad Máxima de Libros</th>
+                    <th class="border px-4 py-2">Cantidad de Libros Reservados</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- Aquí se mostrarán las filas de estudiantes -->
+				
+			</tbody>
+		</table>
+		</div>
+        <div style="height: 20px;"></div>
+        <div style="height: 20px;"></div>
+        <div style="height: 20px;"></div>
+
+        <p td class="border px-4 py-2" style=" font-size: larger; font-weight: bold;">BUSCAR LIBROS:</p>
+        <div class="p-4">
+         
+            <label for="txtLibross" class="text-lg">ID Libro:</label>
+            <input type="text" id="txtlibroid" name="txtlibroid" class="border rounded p-2 ml-2">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="fn_Estado_libroxid()">Por ID</button>
+            <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" onclick="fn_listar_libro()">Mostrar Todos</button>
+            <button class="bg-red-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded ml-2" onclick="limpiarTablaLibros()">Limpiar</button>
+        </div>
+        
+        <div class="overflow-x-auto">
+            <table id="tablelibros" class="table-auto w-full border-collapse border">
+                <thead>
+                    <tr>
+                        <th class="border px-4 py-2">Numero de Ejemplar</th>
+                        <th class="border px-4 py-2">Estado de Libro</th>
+                        <th class="border px-4 py-2">Nombre del libro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        
+
+
+
+        <div style="height: 20px;"></div>
+        <div style="height: 20px;"></div>
+        <div style="height: 20px;"></div>
+        <p td class="border px-4 py-2" style=" font-size: larger; font-weight: bold;">RESERVAR LIBROS:</p>
+        <div class="p-4">
+
+            <label for="txtreservasid" class="text-lg">ID Estudiante:</label>
+            <input type="text" id="txtreservasid" name="txtreservasid" class="border rounded p-2 ml-2">
+            <label for="txtreservasid2" class="text-lg">ID Ejemplar:</label>
+            <input type="text" id="txtreservasid2" name="txtreservasid2" class="border rounded p-2 ml-2">
+            <label for="txtreservasid3" class="text-lg">ID Reserva:</label>
+            <input type="text" id="txtreservasid3" name="txtreservasid3" class="border rounded p-2 ml-2">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="fn_Reservar()">Reservar</button>
+            <button class="bg-red-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded ml-2" onclick="limpiarTablaReservar()">Limpiar</button>
+
+        </div>
+        
+        <div class="overflow-x-auto">
+            <table id="tableReservar" class="table-auto w-full border-collapse border">
+                <thead>
+                    <tr>
+                        <th class="border px-4 py-2">Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        
+        <div style="height: 20px;"></div>
+        <div style="height: 20px;"></div>
+        <div style="height: 20px;"></div>
+        </div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/funciones.js"></script>
+
+    <!-------------------------------------------------------------------------------------------------------->
+	<!-------------------------------------------------------------------------------------------------------->
+	<!-------------------------------------------------------------------------------------------------------->
+	<!-------------------------------------------------------------------------------------------------------->
+	<!-------------------------------------------------------------------------------------------------------->
+	<!-------------------------------------------------------------------------------------------------------->
+
+<div style="height: 20px;"></div>
+
+
+<section class="footer-top-section">
+	<div class="container">
+		<div class="footer-top-bg">
+			
+		</div>
+		<div class="row">
+			<div class="col-lg-4">
+				<div class="footer-logo text-white">
+					<img src="img/footer-logo.png" alt="">
+					<p>Sus comentarios nos ayudan a avanzar, sabemos que desean aprender y les brindaremos los servicios necesarios para que eso sea posible.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="footer-widget mb-5 mb-md-0">
+					<h4 class="fw-title">Últimas Publicaciones</h4>
+					<div class="latest-blog">
+						<div class="lb-item">
+							<div class="lb-thumb set-bg" data-setbg="img/latest-blog/1.jpg"></div>
+							<div class="lb-content">
+								<div class="lb-date">21 de Octubre de 2018</div>
+								<p>Los estudiantes de la famosa universidad UPN son los que usan mas nuestros servicios en lo que lleva el año 2018</p>
+								<a href="#" class="lb-author">Gabriel Niño de Guzman</a>
+							</div>
+						</div>
+						<div class="lb-item">
+							<div class="lb-thumb set-bg" data-setbg="img/latest-blog/2.jpg"></div>
+							<div class="lb-content">
+								<div class="lb-date">7 de Junio de 2020</div>
+								<p>Estamos forjando nuestros convenios con otras universidades y institutos, atentos a las publicaciones.</p>
+								<a href="#" class="lb-author">Guillermo Novoa</a>
+							</div>
+						</div>
+						<div class="lb-item">
+							<div class="lb-thumb set-bg" data-setbg="img/latest-blog/3.jpg"></div>
+							<div class="lb-content">
+								<div class="lb-date">18 de Julio de 2021</div>
+								<p>Despues de tanta espera podemos afirmar que tendremos convenio con el instituto Zegel Ipae.</p>
+								<a href="#" class="lb-author">Mirella Matsuo</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="footer-widget">
+					<h4 class="fw-title">Comentarios</h4>
+					<div class="top-comment">
+						<div class="tc-item">
+							<div class="tc-thumb set-bg" data-setbg="img/authors/1.jpg"></div>
+							<div class="tc-content">
+								<p><a href="#">Jose Quispe</a> <span>Comenta</span>  Me encanta el sistema y la gente</p>
+									<div class="tc-date">6 de Agosto de 2018</div>
+								</div>
+							</div>
+							<div class="tc-item">
+								<div class="tc-thumb set-bg" data-setbg="img/authors/2.jpg"></div>
+								<div class="tc-content">
+									<p><a href="#">Carlos Condorcanqui</a> <span>Comenta</span>  Esperare a las actualizaciones quiero saber con quien mas tendra convenios esta bibliotequita</p>
+									<div class="tc-date">31 de Noviembre de 2020</div>
+								</div>
+							</div>
+							<div class="tc-item">
+								<div class="tc-thumb set-bg" data-setbg="img/authors/3.jpg"></div>
+								<div class="tc-content">
+									<p><a href="#">Antuanet Huaman</a> <span>Comenta</span>  Ire a darme un paseo por la biblioteca</p>
+									<div class="tc-date">26 de Diciembre de 2020</div>
+								</div>
+							</div>
+							<div class="tc-item">
+								<div class="tc-thumb set-bg" data-setbg="img/authors/4.jpg"></div>
+								<div class="tc-content">
+									<p><a href="#">Jose Jose</a> <span>Comenta</span>  Reservare algunos libros para mi hija...</p>
+									<div class="tc-date">29 de Febrero de 2021</div>
+								<div style="height: 20px;"></div>
+								<div style="height: 20px;"></div>
+								<div style="height: 20px;"></div>
+								<div style="height: 12px;"></div>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<footer class="footer-section">s
+		<div class="container">
+			<ul class="footer-menu">
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="Libros.html">Libros</a></li>
+				<li><a href="categories.html">Reservar</a></li>
+				<li><a href="contact.html">Contáctanos</a></li>
+			</ul>
+			<p class="copyright">
+				<i class="fa fa-heart-o" aria-hidden="true"></i>  <a href="" target="_blank"></a>
+
+</p>
+		</div>
+	</footer>
+    <script src="java.js"></script>
+	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.marquee.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/daltonismo.js"></script>
+    </body>
+</html>

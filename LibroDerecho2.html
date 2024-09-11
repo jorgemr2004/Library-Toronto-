@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleDetalle.css">
+    <link rel="stylesheet" href="css/daltonismo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <svg width="0" height="0" style="position:absolute">
+        <defs>
+            <filter id="protanopia">
+                <feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0, 0.558, 0.442, 0, 0, 0, 0, 0.242, 0.758, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="deuteranopia">
+                <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0, 0.7, 0.3, 0, 0, 0, 0, 0.3, 0.7, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="tritanopia">
+                <feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0, 0, 0.433, 0.567, 0, 0, 0, 0.475, 0.525, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+        </defs>
+    </svg>
+    <section class="volver contianer">
+        <button class="volver-btn" onclick="redirectToVolver()"> <i class="fas fa-arrow-left"></i> VOLVER</button>
+    </section>
+    <section class="libros container">
+        <div class="box-detalle-libro1">
+            <div class="box-1 libro1">
+                <div class="contenido-principal">
+                    <img src="imagen/derecho2.png" alt="">
+                    <div class="detalle-libro">
+                        <div class="titulo-autor">
+                            <h2>Derecho laboral individual – 1ra edición <br>(Edición en Español)</h2>
+                            <h3>Por: <span class="autor"><i class="fas fa-user"></i> Juan Fernando Martínez Mendoza</span></h3>
+                            <h4>Reseña:</h4>
+                            <div class="reseña-container">
+                                <p class="reseña">
+                                La obra expone un estudio de la legislación laboral con mirada crítica desde el punto <br>
+                                de vista de la experiencia que ha recogido el autor a lo largo de años en los diferentes <br>
+                                estadios, en los cuales ha ejercido como profesional del derecho, con una visión aplicada<br>
+                                a la industria manufacturera. El material recopilado busca estudiar el derecho individual <br>
+                                desde la estructura del Código Sustantivo del Trabajo, con términos y experiencias <br>
+                                ajustadas al momento actual, acompañado de análisis jurisprudencial y estudio de los <br>
+                                conceptos desde la Constitución Política, principios del trabajo, el contrato y sus <br>
+                                elementos, prestaciones sociales y pensiones, abarcando la totalidad de las áreas de <br>
+                                esta rama. Este libro se ha inspirado en la constante necesidad de atender a los <br>
+                                estudiantes de carreras afines al derecho con el fin de acercar situaciones reales <br>
+                                al articulado y generar un espacio en el que los términos se transformen a un lenguaje <br>
+                                común, de fácil comprensión y amigable al público en general.<br>
+                                Esta última edición cuenta con una actualización basada en las Normas Internacionales <br>
+                                de Auditoría (NIA) y en las Normas para el ejercicio de la Auditoría Interna (NIEPAI).</p>
+                                <button class="mostrar-mas-btn">MOSTRAR MÁS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="datos-libro">
+                    <p><strong>ISBN:</strong> 7931038</p>
+                    <p><strong>Autor:</strong> Juan Fernando Martínez Mendoza</p>
+                    <p><strong>Editorial:</strong> Primera</p>
+                    <p><strong>Materia:</strong> Derecho, Derecho laboral y del trabajo</p>
+                    <p><strong>Año:</strong> 2021</p>
+                    <p><strong>Idioma:</strong> Español</p>
+                    <p><strong>Páginas:</strong> 220</p>
+                    <p><strong>Encuadernación:</strong> Tapa blanda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h2 class="libro"><i class="fas fa-book"></i> Libros Relacionados</h2>
+    <section class="recomendados-1">
+        
+        <div class="slider-1">
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/derecho1.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroDerecho1()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Una Crítica a las Recetas de la Mano Dura</h3>
+                    <p><span class="autor">AUTOR:</span> Claudia Cesaroni</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/derecho3.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroDerecho3()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>El Sistema Interamericano de Derechos Humanos</h3>
+                    <p><span class="autor">AUTOR:</span> Claudio Rojas</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/derecho4.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroDerecho4()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Constitucionalismo, Descolonización y Pluralismo Jurídico</h3>
+                    <p><span class="autor">AUTOR:</span> Antonio Wolkmer</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/derecho5.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroDerecho5()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Elementos en el impuesto de la renta de las sociedades</h3>
+                <p><span class="autor">AUTOR:</span> Javier García</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/derecho6.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroDerecho6()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Marketing para Abogados Escépticos</h3>
+                    <p><span class="autor">AUTOR:</span> David Pérez</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/derecho7.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroDerecho7()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>El Gobierno de la Justicia: El Consejo General del Poder Judicial</h3>
+                    <p><span class="autor">AUTOR:</span> Fernando Pedraz</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/derecho8.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibroDerecho8()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Manual de Derecho Municipal</h3>
+                    <p><span class="autor">AUTOR:</span> Marcelo Abarzúa</p>
+                </div>
+            </div>
+            
+            <div class="arrow">
+                <button class="left" onclick="left()"></button>
+
+                <button class="rigth" onclick="right()">></button>
+
+            </div>
+        </div>
+    </section>
+    <script src="js/daltonismo.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

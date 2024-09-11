@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleDetalle.css">
+    <link rel="stylesheet" href="css/daltonismo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <svg width="0" height="0" style="position:absolute">
+        <defs>
+            <filter id="protanopia">
+                <feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0, 0.558, 0.442, 0, 0, 0, 0, 0.242, 0.758, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="deuteranopia">
+                <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0, 0.7, 0.3, 0, 0, 0, 0, 0.3, 0.7, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="tritanopia">
+                <feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0, 0, 0.433, 0.567, 0, 0, 0, 0.475, 0.525, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+        </defs>
+    </svg>
+    <section class="volver contianer">
+        <button class="volver-btn" onclick="redirectToVolver()"> <i class="fas fa-arrow-left"></i> VOLVER</button>
+    </section>
+    <section class="libros container">
+        <div class="box-detalle-libro1">
+            <div class="box-1 libro1">
+                <div class="contenido-principal">
+                    <img src="imagen/10.png" alt="">
+                    <div class="detalle-libro">
+                        <div class="titulo-autor">
+                            <h2>EL LIBRO DEL HACKER (ED. 2022)</h2>
+                            <h3>Por: <span class="autor"><i class="fas fa-user"></i> MARIA ANGELES CABALLERO VELASCO
+                                ,<br>
+                                DIEGO CILLEROS SERRANO</span></h3>
+                            <button class="prestar-btn" onclick="redirectToReservar()"> PRESTAR</button>
+                            <h4>Reseña:</h4>
+                            <div class="reseña-container">
+                                <p class="reseña">
+                                Cada día estamos más y más rodeados de tecnología. La forma en que nos comunicamos y<br> 
+                                compartimos datos en la red ha cambiado radicalmente en las últimas décadas. Es <br>
+                                indiscutible el valor que nos aporta la tecnología a los seres humanos, pero también <br>
+                                es cierto que ha ido acompañada de un incremento en los riesgos de seguridad. Los <br>
+                                tipos malos renuevan constantemente los ciberataques y las ciberarmas, lo que hace <br>
+                                que tanto los ciudadanos de a pie como las empresas tengan que evolucionar y conocer <br>
+                                las últimas novedades de ciberseguridad y hacking. En esta nueva edición 2018, los <br>
+                                autores nos presentan desde los conceptos básicos de seguridad y técnicas de hacking <br>
+                                hasta conocimientos avanzados en ciberseguridad, así como las más novedosas técnicas <br>
+                                de ataque. Nos descubren los retos y riesgos de la identidad digital, criptografía y<br>
+                                firma electrónica, técnicas de intrusión, hacking web, exploiting, etc. También <br>
+                                abordarán los sistemas tecnológicos industriales y los riesgos y ataques asociados. <br>
+                                Veremos la gestión de crisis y wargaming, y por último, introducirán al lector en los <br>
+                                conceptos de ciberarmas y ciberamenazas que desarrollan tanto los ciberdelincuentes y <br>
+                                mafias organizadas como los gobiernos y países: la guerra 3.0.</p>
+                                <button class="mostrar-mas-btn">MOSTRAR MÁS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="datos-libro">
+                    <p><strong>ISBN:</strong> 7931010</p>
+                    <p><strong>Autores:</strong> MARIA ANGELES CABALLERO VELASCO, DIEGO CILLEROS SERRANO</p>
+                    <p><strong>Editorial:</strong> EDICIONES ANAYA MULTIMEDIA</p>
+                    <p><strong>Materia:</strong> Informática - Tecnología</p>
+                    <p><strong>Año de edición:</strong> 2022</p>
+                    <p><strong>Idioma:</strong> Español</p>
+                    <p><strong>Páginas:</strong> 272</p>
+                    <p><strong>Encuadernación:</strong> Tapa blanda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h2 class="libro"><i class="fas fa-book"></i> Libros Relacionados</h2>
+    <section class="recomendados-1">
+        
+        <div class="slider-1">
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/2.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro2()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Algoritmo. Guía Ilustrada Para Programadores</h3>
+                    <p><span>AUTOR:</span> Aditya Y. Bhargava</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/3.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro3()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Fundamentos de Bases de Datos, 6° Edición</h3>
+                    <p><span>AUTOR:</span> Abraham Silbershaz</p>
+                    
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/4.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro4()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>El Programador Pragmático</h3>
+                    <p><span>AUTOR:</span> David Thomas y Andrew Hunt</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/5.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro5()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>No Me Hagas Pensar, 2° Edición</h3>
+                    <p><span>AUTOR:</span> Steve Krug</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/6.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro6()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Lenguaje de Programación Rust, 2° Edición</h3>
+                    <p><span>AUTOR:</span> Steve Klabnik y Carol Nichols</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/7.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro7()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Python para Análisis de Datos</h3>
+                    <p><span>AUTOR:</span> Wes McKinney</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/8.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro8()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Ingeniería de Software. Un Enfoque Práctico</h3>
+                    <p><span>AUTOR:</span> Roger S. Pressman, Bruce R.Maxim</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/9.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro9()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>JavaScript Elocuente Tercera Actualización</h3>
+                    <p><span>AUTOR:</span> Marijin Haverbeke</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/1.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro1()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Algoritmo. Guía Ilustrada Para Programadores</h3>
+                    <p><span>AUTOR:</span> Aditya Y. Bhargava</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/11.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro11()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Arquitectura de Software:Las Partes difíciles</h3>
+                    <p><span>AUTOR:</span> Neal Ford</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/12.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro12()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Guía Completa de Linux Para Hackers</h3>
+                    <p><span>AUTOR:</span> William Vance</p>
+                </div>
+            </div> 
+            
+            <div class="arrow">
+                <button class="left" onclick="left()"><</button>
+
+                <button class="rigth" onclick="right()">></button>
+
+            </div>
+        </div>
+    </section>
+    
+    <audio id="Libro10AudioDetalle">
+        <source src="audio/detalleLibro10.mp3" type="audio/mpeg">
+    </audio>
+    <script src="js/daltonismo.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

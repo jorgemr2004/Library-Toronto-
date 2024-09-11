@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleDetalle.css">
+    <link rel="stylesheet" href="css/daltonismo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <svg width="0" height="0" style="position:absolute">
+        <defs>
+            <filter id="protanopia">
+                <feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0, 0.558, 0.442, 0, 0, 0, 0, 0.242, 0.758, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="deuteranopia">
+                <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0, 0.7, 0.3, 0, 0, 0, 0, 0.3, 0.7, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="tritanopia">
+                <feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0, 0, 0.433, 0.567, 0, 0, 0, 0.475, 0.525, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+        </defs>
+    </svg>
+    <section class="volver contianer">
+        <button class="volver-btn" onclick="redirectToVolver()"> <i class="fas fa-arrow-left"></i> VOLVER</button>
+    </section>
+    <section class="libros container">
+        <div class="box-detalle-libro1">
+            <div class="box-1 libro1">
+                <div class="contenido-principal">
+                    <div class="imagen-container">
+                        <img src="imagen/1.png" alt="">
+                        <div class="audio-icon">
+                                <i class="fas fa-headphones"></i>
+                        </div>
+                    </div>
+
+                    <div class="detalle-libro">
+                        <div class="titulo-autor">
+                            <h2>Estructuras de Datos y Algoritmos.<br>Guía Ilustrada para Programadores</h2>
+                            <h3>Por: <span class="autor"><i class="fas fa-user"></i> Mariona Nadal Farre</span></h3>
+                            <button class="prestar-btn" onclick="redirectToReservar()"> PRESTAR</button>
+                            <button class="vista-previa-btn" onclick="redirectToAudioLibro1()">VISTA PREVIA</button>
+                            <h4>Reseña:</h4>
+                            <div class="reseña-container">
+                                <p class="reseña">Los algoritmos y las estructuras de datos son las herramientas básicas que necesita<br> 
+                                   todo programador para construir aplicaciones que resuelvan problemas. Conocer uno  <br>
+                                   (o varios) lenguajes de programación no es suficiente. Las estructuras de datos te <br>
+                                   permitirán organizar la información que el programa maneja, buscando la mayor efi- <br>
+                                   ciencia en espacio o en tiempo, según las necesidades de tu aplicación. Por otro   <br>
+                                   lado, los algoritmos definen los pasos necesarios para resolver un problema.<br>
+                                   En esta obra combinaremos el aprendizaje de ambas partes. Por un lado, aprenderemos<br>
+                                   las estructuras de datos más comunes, sus pros y sus contras. Con estos ladrillos  <br>
+                                   podrás construir las estructuras que necesites en tus proyectos. Por otro lado,    <br>
+                                   aprenderemos las herramientas básicas para la elaboración de algoritmos y veremos  <br>
+                                   unos cuantos ejemplos conocidos para familiarizarnos con ellos y así definir los   <br>
+                                   algoritmos propios que requiera tu proyecto. Todo ello se ilustra con gran cantidad<br>
+                                   de ejemplos, ejercicios resueltos y proyectos prácticos, cuyo código estará accesi-<br>
+                                   ble para el lector. Conocer y dominar estructuras de datos y algoritmos es <br>
+                                   fundamental para avanzar en tu carrera en el desarrollo de software.</p>
+                                <button class="mostrar-mas-btn">MOSTRAR MÁS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="datos-libro" style="margin-top: -195px;">
+                    <p><strong>ISBN:</strong> 7931001</p>
+                    <p><strong>Autora:</strong> Mariona Nadal Farre</p>
+                    <p><strong>Editorial:</strong> EDICIONES ANAYA MULTIMEDIA</p>
+                    <p><strong>Materia:</strong> Informática - Tecnología</p>
+                    <p><strong>Año:</strong> 2022</p>
+                    <p><strong>Idioma:</strong> Español</p>
+                    <p><strong>Páginas:</strong> 272</p>
+                    <p><strong>Encuadernación:</strong> Tapa blanda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h2 class="libro"><i class="fas fa-book"></i> Libros Relacionados</h2>
+    <section class="recomendados-1">
+        
+        <div class="slider-1">
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/2.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro2()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Algoritmo. Guía Ilustrada Para Programadores</h3>
+                    <p><span>AUTOR:</span> Aditya Y. Bhargava</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/3.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro3()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Fundamentos de Bases de Datos, 6° Edición</h3>
+                    <p><span>AUTOR:</span> Abraham Silbershaz</p>
+                    
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/4.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro4()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>El Programador Pragmático</h3>
+                    <p><span>AUTOR:</span> David Thomas y Andrew Hunt</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/5.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro5()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>No Me Hagas Pensar, 2° Edición</h3>
+                    <p><span>AUTOR:</span> Steve Krug</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/6.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro6()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Lenguaje de Programación Rust, 2° Edición</h3>
+                    <p><span>AUTOR:</span> Steve Klabnik y Carol Nichols</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/7.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro7()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Python para Análisis de Datos</h3>
+                    <p><span>AUTOR:</span> Wes McKinney</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/8.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro8()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Ingeniería de Software. Un Enfoque Práctico</h3>
+                    <p><span>AUTOR:</span> Roger S. Pressman, Bruce R.Maxim</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/9.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro9()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>JavaScript Elocuente Tercera Actualización</h3>
+                    <p><span>AUTOR:</span> Marijin Haverbeke</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/10.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro10()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>El Libro del Hacker. Edición 2022</h3>
+                    <p><span>AUTOR:</span> María Ángeles Caballero Velazco</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/11.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro11()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Arquitectura de Software:Las Partes difíciles</h3>
+                    <p><span>AUTOR:</span> Neal Ford</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/12.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro12()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Guía Completa de Linux Para Hackers</h3>
+                    <p><span>AUTOR:</span> William Vance</p>
+                </div>
+            </div> 
+            
+            <div class="arrow">
+                <button class="left" onclick="left()"></button>
+                <button class="rigth" onclick="right()">></button>
+            </div>
+        </div>
+    </section>
+
+    <audio id="Libro1AudioDetalle">
+        <source src="audio/detalleLibro1.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/daltonismo.js"></script>
+    <script src="script.js"></script>
+    <script src="java.js"></script>
+</body>
+</html>

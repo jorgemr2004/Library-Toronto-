@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<title>BIBLIOTECA TORONTO</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/whatsapp.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/animate.css"/>
+	<link rel="stylesheet" href="css/daltonismo.css"/>
+	<style>
+		.review-item {
+		  margin: 15px;
+		  text-align: center;
+		}
+	</style>
+
+</head>
+<body>
+	<svg width="0" height="0" style="position:absolute">
+        <defs>
+            <filter id="protanopia">
+                <feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0, 0.558, 0.442, 0, 0, 0, 0, 0.242, 0.758, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="deuteranopia">
+                <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0, 0.7, 0.3, 0, 0, 0, 0, 0.3, 0.7, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="tritanopia">
+                <feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0, 0, 0.433, 0.567, 0, 0, 0, 0.475, 0.525, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+        </defs>
+    </svg>
+    <a href="https://api.whatsapp.com/send?phone=51936560959&text=Hola, me gustaria realizar una reserva." class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
+	
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+
+	
+	<header class="header-section">
+		<div class="container">
+
+			
+			<a class="site-logo" href="index.html">
+				<img src="img/logo.png" alt="">
+			</a>
+			<div style="font-size: 20px;">
+				<div style="height: 10px;"></div>
+			</div>
+	
+			
+			<div class="nav-switch">
+				<i class="fa fa-bars"></i>
+			</div>
+
+			
+			<nav class="main-menu" style="text-align: center;">
+				<ul>
+					<select id="daltonismoSelector" onchange="setDaltonismoOption(this.value)">
+						<option value="none">Corrección visual</option>
+						<option value="deuteranopia">Deuteranopia</option>
+						<option value="protanopia">Protanopia</option>
+						<option value="tritanopia">Tritanopia</option>
+					</select>
+					<li class="inicio"><a href="index.html" onclick="redirectToInicio()">Inicio</a></li>
+					<li class="libros"><a href="Libros.html" onclick="redirectToLibros()">Libros</a></li>
+					<li class="reservar"><a href="categories.html" onclick="redirectToReservar()">Reservar</a></li>
+					<li class="contactanos"><a href="contact.html" onclick="redirectToContactanos()">Contáctanos</a></li>
+				</ul>
+			</nav>
+			
+		</div>
+	</header>
+
+	<audio id="Inicio">
+        <source src="audio/Inicio.mp3" type="audio/mpeg">
+    </audio>
+	<audio id="Libros">
+        <source src="audio/Libros.mp3" type="audio/mpeg">
+    </audio>
+	<audio id="Reservar">
+        <source src="audio/Reservar.mp3" type="audio/mpeg">
+    </audio>
+	<audio id="Contactanos">
+        <source src="audio/Contactanos.mp3" type="audio/mpeg">
+    </audio>
+	<audio id="bienvenidoInicio">
+        <source src="audio/bienvenidoInicio.mp3" type="audio/mpeg">
+    </audio>
+	<audio id="navegacion">
+        <source src="audio/navegacion.mp3" type="audio/mpeg">
+    </audio>
+
+	<section class="hero-section">
+		<div class="hero-slider owl-carousel">
+			<div class="hs-item set-bg" data-setbg="img/slider-1.jpg">
+				<div class="hs-text">
+					<div class="container">
+						<h2>Biblioteca <span>Universidad de Toronto</span></h2>
+						<p style="font-size: 25px;">¡Bienvenido al corazón del conocimiento en la Universidad de Toronto! Nuestra biblioteca es un recurso invaluable para estudiantes, profesores, investigadores y la comunidad en general. Estamos comprometidos a proporcionar acceso a una amplia gama de recursos, servicios y espacios diseñados para apoyar el aprendizaje, la investigación y la exploración intelectual.</p>
+						
+					</div>
+				</div>
+			</div>
+			<div class="hs-item set-bg" data-setbg="img/slider-2.jpg">
+				<div class="hs-text">
+					<div class="container">
+						<h2> Nuestros <span>Servicios</span> </h2>
+                     <p style="font-size: 25px;">En la Biblioteca de la Universidad de Toronto, nos enorgullece ofrecer una amplia variedad de servicios diseñados para satisfacer las necesidades de nuestra comunidad académica. Desde la reserva de libros hasta la asistencia personalizada, estamos aquí para apoyarte en cada paso de tu viaje académico. Descubre cómo nuestros servicios pueden beneficiarte.</p>		
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="latest-news-section">
+		<div class="ln-title">Más información</div>
+		<div class="news-ticker">
+			<div class="news-ticker-contant">
+				<div class="nt-item"><span class="new">actual</span>Atendemos de 8 a.m. a 10 p.m. de lunes a sábados </div>
+				<div class="nt-item"><span class="strategy">perseverancia</span>Tenemos los libros de mejor calidad, según nosotros </div>
+				<div class="nt-item"><span class="racing">constancia</span>Somos una de las universidades más destacadas de Canadá. </div>
+			</div>
+		</div>
+	</div>
+	
+	<section class="recent-game-section spad set-bg" >
+		<div class="container">
+			<div class="section-title">
+				
+				<h2>¿Qué ofrecemos?</h2>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6">
+					<div class="recent-game-item">
+						<div class="rgi-thumb set-bg" data-setbg="img/recent-game/1.jpg">
+							<div class="cata new">Grandeza</div>
+						</div>
+						<div class="rgi-content">
+							<h5>DIVERSIDAD</h5>
+							<p style="font-size: 18px;">Explora una biblioteca que celebra la diversidad en todas sus formas. Nuestros recursos y servicios reflejan la riqueza de perspectivas de nuestra comunidad, creando un espacio inclusivo para todos.</p>
+							<div style="height: 20px;"></div>
+							<div class="rgi-extra">
+								<div class="rgi-star"><img src="img/icons/star.png" alt=""></div>
+								<div class="rgi-heart"><img src="img/icons/heart.png" alt=""></div>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="recent-game-item">
+						<div class="rgi-thumb set-bg" data-setbg="img/recent-game/2.jpg">
+							<div class="cata racing">Avance</div>
+						</div>
+						<div class="rgi-content">
+							<h5>INNOVACIÓN </h5>
+							<p style="font-size: 18px;">Descubre una biblioteca en constante evolución, donde la innovación impulsa el aprendizaje y la investigación. Desde tecnologías emergentes hasta servicios personalizados, estamos comprometidos con la vanguardia académica.</p>
+						
+							<div class="rgi-extra">
+								<div class="rgi-star"><img src="img/icons/star.png" alt=""></div>
+								<div class="rgi-heart"><img src="img/icons/heart.png" alt=""></div>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="recent-game-item">
+						<div class="rgi-thumb set-bg" data-setbg="img/recent-game/3.jpg">
+							<div class="cata adventure">Compañerismo</div>
+						</div>
+						<div class="rgi-content">
+							<h5>COMUNIDAD</h5>
+							<p style="font-size: 18px;">Únete a una comunidad vibrante en nuestra biblioteca, donde los estudiantes, profesores e investigadores se reúnen para colaborar y compartir conocimientos. Todos son bienvenidos en este espacio inclusivo y acogedor.</p>
+							
+							<div class="rgi-extra">
+								<div class="rgi-star"><img src="img/icons/star.png" alt=""></div>
+								<div class="rgi-heart"><img src="img/icons/heart.png" alt=""></div>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="tournaments-section spad">
+		<div class="container">
+			<h2 style="color: white; text-align: center;">Tenemos convenios con:</h2>
+			<div style="height: 20px;"></div>
+			<div style="height: 20px;"></div>
+				<div class="row">
+				<div class="col-md-6">
+					<div class="tournament-item mb-4 mb-lg-0">
+						<div class="ti-notic">Universidad</div>
+						<div class="ti-content">
+							<div class="ti-thumb set-bg" data-setbg="img/tournament/1.jpg"></div>
+							<div class="ti-text">
+								<h4>Universidad Privada del Norte</h4>
+                                <ul>
+                                    <li><span>Ubicación:</span> Región Norte, País Perú</li>
+                                    <li><span>Año de Fundación:</span> 1994</li>
+                                    <li><span>Tipo:</span> Privada</li>
+									<li><span>Programas Ofrecidos:</span> Ingeniería, Negocios, Derecho, Medicina, Humanidades</li>
+								</ul>				
+								<p><span>Servicios:</span> Biblioteca, Laboratorios, Orientación, Actividades, Prácticas</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="tournament-item">
+						<div class="ti-notic">Biblioteca</div>
+							<div class="ti-content">
+								<div class="ti-thumb set-bg" data-setbg="img/tournament/2.jpg"></div>
+								<div class="ti-text">
+									<h4>Biblioteca Nacional del Perú (BNP)</h4>
+									<ul>
+										<li><span>Fecha de Inauguración:</span> 10 de julio de 1821</li>
+										<li><span>Colecciones:</span> Libros, Manuscritos, Periódicos, Fotografías</li>
+										<li><span>Capacidad:</span> Más de 1 millón de volúmenes</li>
+										<li><span>Director:</span> José de San Martin</li>
+									</ul>
+									<p><span>Servicios:</span> Préstamo de libros, Sala de Lectura, Investigación, Actividades Culturales</p>
+									<div style="height: 20px;"></div>
+								</div>
+							</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="review-section spad set-bg" >
+		<div class="container">
+			<div class="section-title">
+				<h2>Nuestro equipo es:</h2>
+			</div>
+			<div id="reviewCarousel" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+				  <div class="carousel-item active">
+					<div class="row">
+					  <div class="col-lg-4 col-md-6">
+						<div class="review-item">
+						  <div class="review-cover set-bg" data-setbg="img/programmers/gabriel.jpg" style="border-radius: 25%;"></div>
+						  <div class="review-text">
+							<h5>GABRIEL SAMUEL NIÑO DE GUZMAN BERMEJO</h5>
+							<p>Programador y especialista de software</p>
+						  </div>
+						</div>
+					  </div>
+					  <div class="col-lg-4 col-md-6">
+						<div class="review-item">
+						  <div class="review-cover set-bg" data-setbg="img/programmers/guillermo.jpg" style="border-radius: 25%;"></div>
+						  <div class="review-text">
+							<h5>GUILLERMO BRYAN NOVOA GALVEZ</h5>
+							<p>Analista de la base de datos de la biblioteca.</p>
+						  </div>
+						</div>
+					  </div>
+					  <div class="col-lg-4 col-md-6">
+						<div class="review-item">
+						  <div class="review-cover set-bg" data-setbg="img/programmers/mirella.jpg" style="border-radius: 25%;"></div>
+						  <div class="review-text">
+							<h5>MIRELLA YURIKO MATSUO ESPINOZA</h5>
+							<p>Creadora y diseñadora de manuales arquitectonicos</p>
+						  </div>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				  <div class="carousel-item">
+					<div class="row">
+					  <div class="col-lg-4 col-md-6">
+						<div class="review-item">
+						  <div class="review-cover set-bg" data-setbg="img/programmers/joaquin.jpg" style="border-radius: 25%;"></div>
+						  <div class="review-text">
+							<h5>JOAQUÍN ARAMIZ LEVANO RODRIGUEZ</h5>
+							<p>Bibliotecario</p>
+						  </div>
+						</div>
+					  </div>
+					  <div class="col-lg-4 col-md-6">
+						<div class="review-item">
+						  <div class="review-cover set-bg" data-setbg="img/programmers/jorge.jpg" style="border-radius: 25%;"></div>
+						  <div class="review-text">
+							<h5>JORGE ESTUARDO MATURRANO ROJAS</h5>
+							<p>Soporte de seguridad</p>
+						  </div>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<a class="carousel-control-prev" href="#reviewCarousel" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black;"></span>
+					<span class="sr-only">Previous</span>
+				  </a>
+				  <a class="carousel-control-next" href="#reviewCarousel" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black;"></span>
+					<span class="sr-only">Next</span>
+				  </a>
+			</div>
+		</div>
+	</section>
+
+	<section class="footer-top-section">
+		<div class="container">
+			<div class="footer-top-bg">
+				
+			</div>
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="footer-logo text-white">
+						<img src="img/footer-logo.png" alt="">
+						<p>Sus comentarios nos ayudan a avanzar, sabemos que desean aprender y les brindaremos los servicios necesarios para que eso sea posible.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="footer-widget mb-5 mb-md-0">
+						<h4 class="fw-title">Últimas Publicaciones</h4>
+						<div class="latest-blog">
+							<div class="lb-item">
+								<div class="lb-thumb set-bg" data-setbg="img/latest-blog/1.jpg"></div>
+								<div class="lb-content">
+									<div class="lb-date">21 de Octubre de 2018</div>
+									<p>Los estudiantes de la famosa universidad UPN son los que usan más nuestros servicios en lo que lleva el año 2018</p>
+									<a href="#" class="lb-author">Gabriel Niño de Guzman</a>
+								</div>
+							</div>
+							<div class="lb-item">
+								<div class="lb-thumb set-bg" data-setbg="img/latest-blog/2.jpg"></div>
+								<div class="lb-content">
+									<div class="lb-date">7 de Junio de 2020</div>
+									<p>Estamos forjando nuestros convenios con otras universidades y institutos, atentos a las publicaciones.</p>
+									<a href="#" class="lb-author">Guillermo Novoa</a>
+								</div>
+							</div>
+							<div class="lb-item">
+								<div class="lb-thumb set-bg" data-setbg="img/latest-blog/3.jpg"></div>
+								<div class="lb-content">
+									<div class="lb-date">18 de Julio de 2021</div>
+									<p>Después de tanta espera podemos afirmar que tendremos convenio con el instituto Zegel Ipae.</p>
+									<a href="#" class="lb-author">Mirella Matsuo</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="footer-widget">
+						<h4 class="fw-title">Comentarios</h4>
+						<div class="top-comment">
+							<div class="tc-item">
+								<div class="tc-thumb set-bg" data-setbg="img/authors/1.jpg"></div>
+								<div class="tc-content">
+									<p><a href="#">Jose Quispe</a> <span>Comenta</span>  Me encanta el sistema y la gente</p>
+									<div class="tc-date">6 de Agosto de 2018</div>
+								</div>
+							</div>
+							<div class="tc-item">
+								<div class="tc-thumb set-bg" data-setbg="img/authors/2.jpg"></div>
+								<div class="tc-content">
+									<p><a href="#">Carlos Condorcanqui</a> <span>Comenta</span>  Esperare a las actualizaciones quiero saber con quien mas tendra convenios esta bibliotequita</p>
+									<div class="tc-date">31 de Noviembre de 2020</div>
+								</div>
+							</div>
+							<div class="tc-item">
+								<div class="tc-thumb set-bg" data-setbg="img/authors/3.jpg"></div>
+								<div class="tc-content">
+									<p><a href="#">Antuanet Huaman</a> <span>Comenta</span>  Ire a darme un paseo por la biblioteca</p>
+									<div class="tc-date">26 de Diciembre de 2020</div>
+								</div>
+							</div>
+							<div class="tc-item">
+								<div class="tc-thumb set-bg" data-setbg="img/authors/4.jpg"></div>
+								<div class="tc-content">
+									<p><a href="#">Jose Jose</a> <span>Comenta</span>  Reservaré algunos libros para mi hija...</p>
+									<div class="tc-date">28 de Febrero de 2021</div>
+									<div style="height: 20px;"></div>
+			                        <div style="height: 20px;"></div>
+									<div style="height: 20px;"></div>
+									<div style="height: 10px;"></div>
+
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+	<footer class="footer-section">
+		<div class="container">
+			<ul class="footer-menu">
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="Libros.html">Libros</a></li>
+				<li><a href="categories.html">Reservar</a></li>
+				<li><a href="contact.html">Contáctanos</a></li>
+			</ul>
+			<p class="copyright">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>  <a href="" target="_blank"></a>
+            </p>
+		</div>
+	</footer>
+
+	<script>
+
+        function redirectToInicio() {
+            window.location.href = 'index.html';
+        }
+
+        function redirectToLibros() {
+            window.location.href = 'Libros.html';
+        }
+
+        function redirectToReservar() {
+            window.location.href = 'categories.html';
+        }
+
+        function redirectToContactanos() {
+            window.location.href = 'contact.html';
+        }
+    </script>
+		
+
+	<script src="java.js"></script>
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.marquee.min.js"></script>
+	<script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.marquee.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/daltonismo.js"></script>
+    </body>
+</html>

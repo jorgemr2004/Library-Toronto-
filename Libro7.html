@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleDetalle.css">
+    <link rel="stylesheet" href="css/daltonismo.css">
+    <link rel="stylesheet" href="css/daltonismo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <svg width="0" height="0" style="position:absolute">
+        <defs>
+            <filter id="protanopia">
+                <feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0, 0.558, 0.442, 0, 0, 0, 0, 0.242, 0.758, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="deuteranopia">
+                <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0, 0.7, 0.3, 0, 0, 0, 0, 0.3, 0.7, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+            <filter id="tritanopia">
+                <feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0, 0, 0.433, 0.567, 0, 0, 0, 0.475, 0.525, 0, 0, 0, 0, 0, 1, 0" />
+            </filter>
+        </defs>
+    </svg>
+    <section class="volver contianer">
+        <button class="volver-btn" onclick="redirectToVolver()"> <i class="fas fa-arrow-left"></i> VOLVER</button>
+    </section>
+    <section class="libros container">
+        <div class="box-detalle-libro1">
+            <div class="box-1 libro1">
+                <div class="contenido-principal">
+                    <img src="imagen/7.png" alt="">
+                    <div class="detalle-libro">
+                        <div class="titulo-autor">
+                            <h2>Python para análisis de datos <br>Manipulación de datos con pandas, NumPy y Jupyter</h2>
+                            <h3>Por: <span class="autor"><i class="fas fa-user"></i> McKinney, Wes</span></h3>
+                            <button class="prestar-btn" onclick="redirectToReservar()"> PRESTAR</button>
+                            <h4>Reseña:</h4>
+                            <div class="reseña-container">
+                                <p class="reseña">
+                                Obtén el manual definitivo para manipular, procesar, limpiar y restringir conjuntos de<br> 
+                                datos en Python. Actualizado para Python 3.10 y pandas 1.4.0, esta tercera edición de <br>
+                                Python para análisis de datos. Manipulación de datos con pandas, NyumPy y Jupyter está <br>
+                                llena de casos prácticos, que permiten averiguar cómo resolver una amplia variedad de <br>
+                                problemas de datos de una manera efectiva. Con su ayuda conocerás y aprenderás las <br>
+                                versiones más recientes de pandas, NumPy, IPython y Jupyter. Escrito por Wes McKinney, <br>
+                                el creador del proyecto pandas, Python para análisis de datos es una introducción <br>
+                                práctica y moderna a las herramientas de ciencia de datos que ofrece Python. Es ideal <br>
+                                para analistas no versados en Python y para programadores que deseen ponerse al día en <br>
+                                ciencia de datos y computación científica o ciencia computacional. GitHub alberga los <br>
+                                archivos de datos empleados en el libro y otro material asociado. Entre otras cosas, <br>
+                                este libro permite: * Utilizar Jupyter Notebook y el shell de IPython para explorar <br>
+                                datos. * Aprender funciones de NumPy básicas y avanzadas. * Iniciarse en el manejo de <br>
+                                las herramientas de análisis de datos de la librería pandas. * Emplear herramientas <br>
+                                flexibles para limpiar, transformar, combinar y remodelar datos. * Aprender cómo <br>
+                                resolver problemas reales de análisis de datos con ejemplos específicos y detallados.</p>
+                                <button class="mostrar-mas-btn">MOSTRAR MÁS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="datos-libro">
+                    <p><strong>ISBN:</strong> 7931007</p>
+                    <p><strong>Autor:</strong> McKinney, Wes</p>
+                    <p><strong>Editorial:</strong> ANAYA</p>
+                    <p><strong>Materia:</strong> Informática - Tecnología</p>
+                    <p><strong>Año:</strong> 2023</p>
+                    <p><strong>Idioma:</strong> Español</p>
+                    <p><strong>Páginas:</strong> 520</p>
+                    <p><strong>Encuadernación:</strong> Tapa blanda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h2 class="libro"><i class="fas fa-book"></i> Libros Relacionados</h2>
+    <section class="recomendados-1">
+        
+        <div class="slider-1">
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/2.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro2()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Algoritmo. Guía Ilustrada Para Programadores</h3>
+                    <p><span>AUTOR:</span> Aditya Y. Bhargava</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/3.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro3()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Fundamentos de Bases de Datos, 6° Edición</h3>
+                    <p><span>AUTOR:</span> Abraham Silbershaz</p>
+                    
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/4.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro4()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>El Programador Pragmático</h3>
+                    <p><span>AUTOR:</span> David Thomas y Andrew Hunt</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/5.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro5()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>No Me Hagas Pensar, 2° Edición</h3>
+                    <p><span>AUTOR:</span> Steve Krug</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/6.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro6()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Lenguaje de Programación Rust, 2° Edición</h3>
+                    <p><span>AUTOR:</span> Steve Klabnik y Carol Nichols</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/1.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro1()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Algoritmo. Guía Ilustrada Para Programadores</h3>
+                    <p><span>AUTOR:</span> Aditya Y. Bhargava</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/8.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro8()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Ingeniería de Software. Un Enfoque Práctico</h3>
+                    <p><span>AUTOR:</span> Roger S. Pressman, Bruce R.Maxim</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/9.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro9()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>JavaScript Elocuente Tercera Actualización</h3>
+                    <p><span>AUTOR:</span> Marijin Haverbeke</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/10.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro10()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>El Libro del Hacker. Edición 2022</h3>
+                    <p><span>AUTOR:</span> María Ángeles Caballero Velazco</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/11.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro11()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Arquitectura de Software:Las Partes difíciles</h3>
+                    <p><span>AUTOR:</span> Neal Ford</p>
+                </div>
+            </div>
+
+            <div class="product-1">
+                <div class="image-1">
+                    <img src="imagen/12.png" alt="">
+                    <button class="ver-detalle-btn" onclick="redirectToLibro12()">Ver libro</button>
+                </div>
+                <div class="information-1">
+                    <h3>Guía Completa de Linux Para Hackers</h3>
+                    <p><span>AUTOR:</span> William Vance</p>
+                </div>
+            </div> 
+            
+            <div class="arrow">
+                <button class="left" onclick="left()"><</button>
+
+                <button class="rigth" onclick="right()">></button>
+
+            </div>
+        </div>
+    </section>
+
+    <audio id="Libro7AudioDetalle">
+        <source src="audio/detalleLibro7.mp3" type="audio/mpeg">
+    </audio>
+    <script src="js/daltonismo.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
